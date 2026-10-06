@@ -1,0 +1,501 @@
+/* =========================================================
+   STYLE.CSS
+   CSS สำหรับเว็บไซต์แนะนำหนังสือ "กล้าที่จะถูกเกลียด"
+   ใช้งานร่วมกับ Bootstrap 5.3.3
+   ========================================================= */
+
+
+/* =========================
+   1. พื้นฐานเว็บไซต์
+   ========================= */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 75px;
+}
+
+body {
+    font-family: "Segoe UI", "Noto Sans Thai", Tahoma, sans-serif;
+    color: #212529;
+    background-color: #cde6ff;
+}
+
+
+/* =========================
+   2. NAVBAR
+   ========================= */
+
+.navbar {
+    min-height: 70px;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    letter-spacing: 1px;
+}
+
+.navbar-brand i {
+    color: #dc3545;
+}
+
+.navbar .nav-link {
+    font-weight: 500;
+    transition: all 0.25s ease;
+    border-radius: 50px;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: #ffffff !important;
+    background-color: #dc3545;
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+
+/* =========================
+   3. HERO
+   ========================= */
+
+#home {
+    position: relative;
+    overflow: hidden;
+    min-height: 90vh !important;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    background-color: rgba(220, 53, 69, 0.08);
+    border-radius: 50%;
+    top: -130px;
+    right: -100px;
+}
+
+#home::after {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-color: rgba(33, 37, 41, 0.05);
+    border-radius: 50%;
+    bottom: -100px;
+    left: -80px;
+}
+
+#home .container {
+    position: relative;
+    z-index: 2;
+}
+
+#home h1 {
+    letter-spacing: -2px;
+}
+
+#home h1 .text-danger {
+    position: relative;
+}
+
+#home h1 .text-danger::after {
+    content: "";
+    position: absolute;
+    height: 8px;
+    background-color: rgba(220, 53, 69, 0.18);
+    left: 0;
+    right: 0;
+    bottom: 3px;
+    z-index: -1;
+}
+
+#home .lead {
+    max-width: 650px;
+    line-height: 1.9;
+}
+
+#home .col-lg-5 > div {
+    transition: all 0.4s ease;
+}
+
+#home .col-lg-5 > div:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.16) !important;
+}
+
+#home img {
+    max-height: 620px;
+    width: auto;
+    object-fit: contain;
+}
+
+
+/* =========================
+   4. BUTTONS
+   ========================= */
+
+.btn {
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #bb2d3b;
+    border-color: #b02a37;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(220, 53, 69, 0.25);
+}
+
+.btn-outline-dark:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   5. MODAL
+   ========================= */
+
+#bookModal .modal-content {
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.25);
+}
+
+#bookModal .modal-header {
+    border-bottom: 0;
+}
+
+#bookModal .modal-body img {
+    max-height: 550px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+#bookModal .modal-body img:hover {
+    transform: scale(1.02);
+}
+
+#bookModal .border-dark {
+    border-color: #212529 !important;
+}
+
+
+/* =========================
+   6. ABOUT THE BOOK
+   ========================= */
+
+#about {
+    position: relative;
+}
+
+#about .border-dark {
+    border-width: 2px !important;
+    background-color: #ffffff;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.06);
+}
+
+#about h2 {
+    letter-spacing: -1px;
+}
+
+#about .row.g-3 > div > div {
+    transition: all 0.3s ease;
+}
+
+#about .row.g-3 > div > div:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    border-color: #dc3545 !important;
+}
+
+#about .bi {
+    transition: transform 0.3s ease;
+}
+
+#about .row.g-3 > div > div:hover .bi {
+    transform: scale(1.15);
+}
+
+
+/* =========================
+   7. BIG QUOTE
+   ========================= */
+
+.bg-danger.py-5 {
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-danger.py-5::before {
+    content: "“";
+    position: absolute;
+    font-size: 280px;
+    line-height: 1;
+    top: -80px;
+    left: 5%;
+    opacity: 0.08;
+    font-family: Georgia, serif;
+}
+
+.bg-danger.py-5::after {
+    content: "”";
+    position: absolute;
+    font-size: 280px;
+    line-height: 1;
+    bottom: -170px;
+    right: 5%;
+    opacity: 0.08;
+    font-family: Georgia, serif;
+}
+
+.bg-danger.py-5 .container {
+    position: relative;
+    z-index: 2;
+}
+
+.bg-danger.py-5 .display-4 {
+    opacity: 0.9;
+}
+
+.bg-danger.py-5 .display-4.fw-bold {
+    line-height: 1.35;
+}
+
+
+/* =========================
+   8. KEY IDEAS
+   ========================= */
+
+#ideas .card {
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.35s ease;
+}
+
+#ideas .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.12) !important;
+}
+
+#ideas .card-body {
+    min-height: 360px;
+}
+
+#ideas .card .display-4 {
+    transition: transform 0.3s ease;
+}
+
+#ideas .card:hover .display-4 {
+    transform: scale(1.1);
+}
+
+#ideas .card h3 {
+    line-height: 1.35;
+}
+
+#ideas .badge {
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================
+   9. WHO SHOULD READ
+   ========================= */
+
+#reader .border {
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+#reader .border:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+#reader .display-4 {
+    transition: transform 0.3s ease;
+}
+
+#reader .border:hover .display-4 {
+    transform: scale(1.12);
+}
+
+
+/* =========================
+   10. CTA
+   ========================= */
+
+.bg-dark.py-5 {
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-dark.py-5::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 1px solid rgba(220, 53, 69, 0.25);
+    border-radius: 50%;
+    top: -170px;
+    left: -100px;
+}
+
+.bg-dark.py-5::after {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    bottom: -130px;
+    right: -70px;
+}
+
+.bg-dark.py-5 .container {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================
+   11. FOOTER
+   ========================= */
+
+footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+footer .bi-book-half {
+    color: #dc3545;
+}
+
+
+/* =========================
+   12. EFFECTS
+   ========================= */
+
+.shadow-soft {
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.text-gradient {
+    background: linear-gradient(90deg, #dc3545, #8b1e2d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
+/* =========================
+   13. RESPONSIVE
+   ========================= */
+
+@media (max-width: 991.98px) {
+
+    #home {
+        min-height: auto !important;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    #home h1 {
+        font-size: 4rem;
+    }
+
+    #home .col-lg-5 > div {
+        margin-top: 20px;
+    }
+
+    #about .display-5,
+    #ideas .display-5,
+    #reader .display-5 {
+        font-size: 2.5rem;
+    }
+}
+
+
+@media (max-width: 767.98px) {
+
+    html {
+        scroll-padding-top: 65px;
+    }
+
+    .navbar {
+        min-height: 60px;
+    }
+
+    #home {
+        text-align: center;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    #home h1 {
+        font-size: 3rem;
+        letter-spacing: -1px;
+    }
+
+    #home .d-flex {
+        justify-content: center;
+    }
+
+    #home img {
+        max-height: 500px;
+    }
+
+    #ideas .card-body {
+        min-height: auto;
+    }
+
+    .bg-danger.py-5 .display-4.fw-bold {
+        font-size: 2.3rem;
+    }
+
+    #about .border {
+        padding: 1.5rem !important;
+    }
+}
+
+
+@media (max-width: 575.98px) {
+
+    #home h1 {
+        font-size: 2.5rem;
+    }
+
+    #home .lead {
+        font-size: 1rem;
+    }
+
+    #home .btn {
+        width: 100%;
+    }
+
+    #home .d-flex {
+        flex-direction: column;
+        gap: 0.75rem !important;
+    }
+
+    #home img {
+        max-height: 420px;
+    }
+
+    #about h2 {
+        font-size: 2rem;
+    }
+
+    .bg-danger.py-5 .display-4.fw-bold {
+        font-size: 1.9rem;
+    }
+
+    .bg-dark.py-5 .display-5 {
+        font-size: 2.2rem;
+    }
+}

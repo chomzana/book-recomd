@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>กล้าที่จะถูกเกลียด | หนังสือน่าอ่าน</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- CSS ของเว็บไซต์ -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body class="bg-light">
+
+
+    <!-- =====================================================
+         NAVBAR
+         ===================================================== -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+
+        <div class="container">
+
+            <!-- Logo -->
+            <a class="navbar-brand fw-bold fs-4" href="#home">
+
+                <i class="bi bi-book-half me-2"></i>
+
+                BOOK<span class="text-danger">.</span>
+
+            </a>
+
+
+            <!-- Mobile Menu Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu" aria-expanded="false" aria-label="เปิดเมนู">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="navbarMenu">
+
+                <ul class="navbar-nav ms-auto text-center">
+
+
+                    <!-- Home -->
+                    <li class="nav-item">
+
+                        <a class="nav-link active px-3" href="#home">
+
+                            <i class="bi bi-house-door me-1"></i>
+
+                            หน้าแรก
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- About -->
+                    <li class="nav-item">
+
+                        <a class="nav-link px-3" href="#about">
+
+                            <i class="bi bi-book me-1"></i>
+
+                            เกี่ยวกับหนังสือ
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Ideas -->
+                    <li class="nav-item">
+
+                        <a class="nav-link px-3" href="#ideas">
+
+                            <i class="bi bi-lightbulb me-1"></i>
+
+                            แนวคิดสำคัญ
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Reader -->
+                    <li class="nav-item">
+
+                        <a class="nav-link px-3" href="#reader">
+
+                            <i class="bi bi-people me-1"></i>
+
+                            เหมาะกับใคร
+
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =====================================================
+
+   <!-================= HERO ================= -->
+    <section id="home" class="bg-light text-dark min-vh-100 d-flex align-items-center">
+
+        <div class="container">
+
+            <div class="row align-items-center g-5">
+
+
+                <!-- ================= LEFT : คำโปรย ================= -->
+                <div class="col-lg-7">
+
+                    <!-- คำโปรยหัวข้อ -->
+                    <p class="text-danger fw-bold fs-5 mb-3">
+
+                        <i class="bi bi-stars me-2"></i>
+
+                        BOOK RECOMMENDATION
+
+                    </p>
+
+
+                    <!-- ชื่อหนังสือ -->
+                    <h1 class="display-1 fw-bold lh-1">
+
+                        กล้าที่จะ
+
+                        <br>
+
+                        <span class="text-danger">
+                            ถูกเกลียด
+                        </span>
+
+                    </h1>
+
+
+                    <!-- คำโปรยหนังสือ -->
+                    <p class="lead text-dark mt-4">
+
+                        หนังสือที่จะชวนคุณตั้งคำถามกับชีวิต
+                        ความคาดหวังของคนอื่น
+                        และความกล้าที่จะเป็นตัวเอง
+
+                    </p>
+
+                    <!-- ปุ่ม -->
+                    <div class="d-flex gap-3 flex-wrap mt-4">
+
+
+                        <!-- ไปส่วน About -->
+                        <a href="#about" class="btn btn-danger btn-lg px-4">
+
+                            <i class="bi bi-book-open me-2"></i>
+
+                            เกี่ยวกับหนังสือ
+
+                        </a>
+
+
+                        <!-- ไปส่วน Ideas -->
+                        <a href="#ideas" class="btn btn-outline-dark btn-lg px-4">
+
+                            <i class="bi bi-lightbulb me-2"></i>
+
+                            ดูแนวคิดสำคัญ
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= RIGHT : รูปหนังสือ ================= -->
+                <div class="col-lg-5 text-center">
+
+                    <div class="bg-dark bg-opacity-10 rounded-4 p-4 shadow">
+
+                        <!-- รูปปกหนังสือ -->
+                        <img src="../book-recomd/Images/book-in.jpg" alt="ปกหน้าหนังสือกล้าที่จะถูกเกลียด"
+                            class="img-fluid rounded-3 shadow">
+                        </p>
+
+                        <!-- ปุ่มดูรายละเอียด -->
+                        <button type="button" class="btn btn-danger px-4 py-2" data-bs-toggle="modal"
+                            data-bs-target="#bookModal">
+
+                            <i class="bi bi-images me-2"></i>
+
+                            ดูรายละเอียดเพิ่มเติม
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =====================================================
+         BOOK MODAL
+         ===================================================== -->
+    <div class="modal fade" id="bookModal" tabindex="-1" aria-labelledby="bookModalLabel" aria-hidden="true">
+
+
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+
+
+            <div class="modal-content border-0 rounded-4 overflow-hidden">
+
+
+                <!-- Modal Header -->
+                <div class="modal-header bg-dark text-white">
+
+
+                    <h5 class="modal-title" id="bookModalLabel">
+
+                        <i class="bi bi-book-half me-2"></i>
+
+                        กล้าที่จะถูกเกลียด
+
+                    </h5>
+
+
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="ปิด">
+                    </button>
+
+
+                </div>
+                <!-- Body -->
+                <div class="modal-body bg-light p-4 p-lg-5">
+
+                    <div class="row g-4 align-items-start">
+
+                        <!-- ================= ปกหน้า ================= -->
+                        <div class="col-md-6 text-center">
+
+                            <div class="bg-white rounded-4 p-3 shadow-sm">
+
+                                <img src="../book-recomd/Images/book-in.jpg" alt="ปกหน้าหนังสือกล้าที่จะถูกเกลียด"
+                                    class="img-fluid rounded-3">
+
+                            </div>
+
+                            <div class="mt-3">
+
+                                <span class="badge bg-danger rounded-pill px-3 py-2">
+
+                                    <i class="bi bi-book me-1"></i>
+
+                                    ปกหน้า
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ================= ปกหลัง ================= -->
+                        <div class="col-md-6 text-center">
+
+                            <div class="bg-white rounded-4 p-3 shadow-sm">
+
+                                <img src="../book-recomd/Images/book-out.jpg" alt="ปกหลังหนังสือกล้าที่จะถูกเกลียด"
+                                    class="img-fluid rounded-3">
+
+                            </div>
+
+                            <div class="mt-3">
+
+                                <span class="badge bg-dark rounded-pill px-3 py-2">
+
+                                    <i class="bi bi-book me-1"></i>
+
+                                    ปกหลัง
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- ================= BOOK INFO ================= -->
+                    <div class="border border-dark rounded-4 p-4 mt-4 bg-white">
+
+                        <div class="row g-4 text-center text-md-start">
+
+                            <div class="col-md-4">
+
+                                <h6 class="text-danger fw-bold">
+                                    <i class="bi bi-bookmark me-2"></i>
+                                    ชื่อหนังสือ
+                                </h6>
+
+                                <p class="mb-0 fw-bold">
+                                    กล้าที่จะถูกเกลียด
+                                </p>
+
+                            </div>
+
+
+                            <div class="col-md-4">
+
+                                <h6 class="text-danger fw-bold">
+                                    <i class="bi bi-person me-2"></i>
+                                    ผู้เขียน
+                                </h6>
+
+                                <p class="mb-0">
+                                    คิชิมิ อิชิโร
+                                    <br>
+                                    โคงะ ฟุมิทาเกะ
+                                </p>
+
+                            </div>
+
+
+                            <div class="col-md-4">
+
+                                <h6 class="text-danger fw-bold">
+                                    <i class="bi bi-journal-text me-2"></i>
+                                    เนื้อหา
+                                </h6>
+
+                                <p class="mb-0">
+                                    จิตวิทยาและการใช้ชีวิต
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Footer -->
+                <div class="modal-footer bg-white">
+
+                    <button type="button" class="btn btn-dark px-4" data-bs-dismiss="modal">
+
+                        <i class="bi bi-x-lg me-2"></i>
+
+                        ปิด
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         ABOUT THE BOOK
+         ===================================================== -->
+    <section id="about" class="py-5 bg-light">
+
+
+        <div class="container py-5">
+
+
+            <div class="row align-items-center g-5">
+
+
+                <!-- ================= LEFT TITLE ================= -->
+
+                <div class="col-lg-5">
+
+
+                    <p class="text-danger fw-bold mb-3">
+
+                        <i class="bi bi-info-circle me-2"></i>
+
+                        ABOUT THE BOOK
+
+                    </p>
+
+
+                    <h2 class="display-5 fw-bold lh-base">
+
+                        หนังสือที่ชวนให้เรา
+
+                        <br>
+
+                        <span class="text-danger">
+
+                            มองชีวิตในมุมใหม่
+
+                        </span>
+
+                    </h2>
+
+
+                </div>
+
+
+
+                <!-- ================= RIGHT CONTENT ================= -->
+
+                <div class="col-lg-7">
+
+
+                    <div class="border border-dark rounded-3 p-4 p-lg-5">
+
+
+                        <!-- Main Description -->
+                        <div class="mb-4">
+
+
+                            <p class="fs-5 lh-lg text-dark mb-3">
+
+
+                                <strong>
+                                    “กล้าที่จะถูกเกลียด”
+                                </strong>
+
+
+                                เป็นหนังสือที่นำเสนอแนวคิดทางจิตวิทยา
+                                ของอัลเฟรด แอดเลอร์
+                                ผ่านบทสนทนาระหว่างนักปรัชญากับชายหนุ่ม
+
+
+                            </p>
+
+
+
+                            <p class="text-secondary lh-lg mb-0">
+
+
+                                ชวนให้ผู้อ่านมองความสัมพันธ์กับคนรอบข้าง
+                                ตั้งคำถามกับความต้องการได้รับการยอมรับ
+                                และกลับมาเลือกวิถีชีวิตของตัวเอง
+
+
+                            </p>
+
+
+                        </div>
+
+
+
+                        <!-- Divider -->
+                        <hr class="border-dark opacity-100 my-4">
+
+
+
+                        <!-- ================= 01 / 02 / 03 ================= -->
+
+                        <div class="row g-3">
+
+
+                            <!-- 01 -->
+                            <div class="col-md-4">
+
+
+                                <div class="border border-dark rounded-3 p-3 h-100">
+
+
+                                    <div class="d-flex align-items-center gap-3 mb-3">
+
+
+                                        <div class="text-danger fs-2">
+
+                                            <i class="bi bi-person-brain"></i>
+
+                                        </div>
+
+
+                                        <span class="fw-bold fs-4">
+
+                                            01
+
+                                        </span>
+
+
+                                    </div>
+
+
+
+                                    <h5 class="fw-bold mb-2">
+
+                                        จิตวิทยา
+
+                                    </h5>
+
+
+                                    <p class="text-secondary small mb-0 lh-lg">
+
+
+                                        ทำความเข้าใจความคิด
+                                        และพฤติกรรมของมนุษย์
+
+
+                                    </p>
+
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <!-- 02 -->
+                            <div class="col-md-4">
+
+
+                                <div class="border border-dark rounded-3 p-3 h-100">
+
+
+                                    <div class="d-flex align-items-center gap-3 mb-3">
+
+
+                                        <div class="text-danger fs-2">
+
+                                            <i class="bi bi-compass"></i>
+
+                                        </div>
+
+
+                                        <span class="fw-bold fs-4">
+
+                                            02
+
+                                        </span>
+
+
+                                    </div>
+
+
+
+                                    <h5 class="fw-bold mb-2">
+
+                                        การใช้ชีวิต
+
+                                    </h5>
+
+
+                                    <p class="text-secondary small mb-0 lh-lg">
+
+
+                                        มองชีวิตผ่านแนวคิด
+                                        และการเลือกเส้นทางของตัวเอง
+
+
+                                    </p>
+
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <!-- 03 -->
+                            <div class="col-md-4">
+
+
+                                <div class="border border-dark rounded-3 p-3 h-100">
+
+
+                                    <div class="d-flex align-items-center gap-3 mb-3">
+
+
+                                        <div class="text-danger fs-2">
+
+                                            <i class="bi bi-person-check"></i>
+
+                                        </div>
+
+
+                                        <span class="fw-bold fs-4">
+
+                                            03
+
+                                        </span>
+
+
+                                    </div>
+
+
+
+                                    <h5 class="fw-bold mb-2">
+
+                                        การค้นหาตัวเอง
+
+                                    </h5>
+
+
+                                    <p class="text-secondary small mb-0 lh-lg">
+
+
+                                        เรียนรู้ที่จะยอมรับตัวเอง
+                                        และเลือกชีวิตที่ต้องการ
+
+
+                                    </p>
+
+
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         BIG QUOTE
+         ===================================================== -->
+    <section class="bg-danger text-white py-5">
+
+
+        <div class="container py-5 text-center">
+
+
+            <!-- Quote Icon -->
+            <div class="display-4 mb-4">
+
+                <i class="bi bi-chat-quote"></i>
+
+            </div>
+
+
+            <!-- Quote -->
+            <p class="display-4 fw-bold">
+
+
+                “คุณไม่จำเป็นต้อง
+
+                <br>
+
+                เป็นที่ชื่นชอบของทุกคน”
+
+
+            </p>
+
+
+            <!-- Quote Description -->
+            <p class="lead mt-4">
+
+                เพราะชีวิตของคุณ เป็นของคุณเอง
+
+            </p>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         KEY IDEAS
+         ===================================================== -->
+    <section id="ideas" class="py-5 bg-light">
+
+
+        <div class="container py-5">
+
+
+            <!-- Section Heading -->
+            <div class="text-center mb-5">
+
+
+                <p class="text-danger fw-bold">
+
+                    <i class="bi bi-lightbulb me-2"></i>
+
+                    KEY IDEAS
+
+                </p>
+
+
+                <h2 class="display-5 fw-bold">
+
+                    3 แนวคิดที่น่าสนใจ
+
+                </h2>
+
+
+                <p class="text-secondary">
+
+                    แนวคิดสำคัญที่ปรากฏในหนังสือ
+
+                </p>
+
+
+            </div>
+
+
+
+            <!-- Cards -->
+            <div class="row g-4">
+
+
+
+                <!-- ================= IDEA 01 ================= -->
+
+                <div class="col-md-4">
+
+
+                    <div class="card border-0 shadow-sm h-100">
+
+
+                        <div class="card-body p-4">
+
+
+                            <div class="text-danger display-4 mb-3">
+
+                                <i class="bi bi-person-x"></i>
+
+                            </div>
+
+
+                            <span class="badge bg-danger rounded-pill mb-3">
+
+                                IDEA 01
+
+                            </span>
+
+
+                            <h3 class="fw-bold">
+
+                                เลิกใช้ชีวิต
+
+                                <br>
+
+                                ตามสายตาคนอื่น
+
+                            </h3>
+
+
+                            <p class="text-secondary mt-3">
+
+
+                                เราไม่สามารถควบคุมความคิดของคนอื่นได้
+                                แต่เราสามารถเลือกการกระทำ
+                                และวิธีใช้ชีวิตของตัวเองได้
+
+
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- ================= IDEA 02 ================= -->
+
+                <div class="col-md-4">
+
+
+                    <div class="card border-0 shadow-sm h-100">
+
+
+                        <div class="card-body p-4">
+
+
+                            <div class="text-dark display-4 mb-3">
+
+                                <i class="bi bi-person-heart"></i>
+
+                            </div>
+
+
+                            <span class="badge bg-dark rounded-pill mb-3">
+
+                                IDEA 02
+
+                            </span>
+
+
+                            <h3 class="fw-bold">
+
+                                กล้าที่จะ
+
+                                <br>
+
+                                เป็นตัวเอง
+
+                            </h3>
+
+
+                            <p class="text-secondary mt-3">
+
+
+                                การใช้ชีวิตในแบบของตัวเอง
+                                อาจไม่ได้รับการยอมรับจากทุกคน
+                                แต่ทำให้เราเลือกทิศทางชีวิตได้ด้วยตัวเอง
+
+
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- ================= IDEA 03 ================= -->
+
+                <div class="col-md-4">
+
+
+                    <div class="card border-0 shadow-sm h-100">
+
+
+                        <div class="card-body p-4">
+
+
+                            <div class="text-danger display-4 mb-3">
+
+                                <i class="bi bi-people"></i>
+
+                            </div>
+
+
+                            <span class="badge bg-danger rounded-pill mb-3">
+
+                                IDEA 03
+
+                            </span>
+
+
+                            <h3 class="fw-bold">
+
+                                ความสัมพันธ์
+
+                                <br>
+
+                                กับผู้อื่น
+
+                            </h3>
+
+
+                            <p class="text-secondary mt-3">
+
+
+                                เรียนรู้ที่จะแยกสิ่งที่เป็น
+                                “งานของเรา”
+                                ออกจากสิ่งที่เป็น
+                                “งานของคนอื่น”
+
+
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         WHO SHOULD READ
+         ===================================================== -->
+    <section id="reader" class="py-5 bg-white">
+
+
+        <div class="container py-5">
+
+
+            <!-- Section Heading -->
+            <div class="row justify-content-center">
+
+
+                <div class="col-lg-9 text-center">
+
+
+                    <p class="text-danger fw-bold">
+
+                        <i class="bi bi-people me-2"></i>
+
+                        WHO SHOULD READ THIS?
+
+                    </p>
+
+
+                    <h2 class="display-5 fw-bold mb-5">
+
+                        หนังสือเล่มนี้เหมาะกับใคร?
+
+                    </h2>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- Reader Cards -->
+            <div class="row g-4">
+
+
+
+                <!-- Reader 01 -->
+                <div class="col-md-3">
+
+
+                    <div class="text-center p-4 border border-danger rounded-4 h-100">
+
+
+                        <div class="text-danger display-4 mb-3">
+
+                            <i class="bi bi-person-brain"></i>
+
+                        </div>
+
+
+                        <h5 class="fw-bold">
+
+                            คนที่ชอบจิตวิทยา
+
+                        </h5>
+
+
+                        <p class="text-secondary small">
+
+
+                            สนใจทำความเข้าใจ
+                            ความคิดและพฤติกรรมของมนุษย์
+
+
+                        </p>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- Reader 02 -->
+                <div class="col-md-3">
+
+
+                    <div class="text-center p-4 border border-dark rounded-4 h-100">
+
+
+                        <div class="text-dark display-4 mb-3">
+
+                            <i class="bi bi-compass"></i>
+
+                        </div>
+
+
+                        <h5 class="fw-bold">
+
+                            คนที่กำลังค้นหาตัวเอง
+
+                        </h5>
+
+
+                        <p class="text-secondary small">
+
+
+                            กำลังตั้งคำถามว่า
+                            ชีวิตที่ต้องการจริง ๆ คืออะไร
+
+
+                        </p>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- Reader 03 -->
+                <div class="col-md-3">
+
+
+                    <div class="text-center p-4 border border-danger rounded-4 h-100">
+
+
+                        <div class="text-danger display-4 mb-3">
+
+                            <i class="bi bi-chat-dots"></i>
+
+                        </div>
+
+
+                        <h5 class="fw-bold">
+
+                            คนที่คิดมากกับคำพูดคนอื่น
+
+                        </h5>
+
+
+                        <p class="text-secondary small">
+
+
+                            อยากกลับมาสำรวจอิทธิพล
+                            ของความคิดเห็นจากคนรอบข้าง
+
+
+                        </p>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- Reader 04 -->
+                <div class="col-md-3">
+
+
+                    <div class="text-center p-4 border border-dark rounded-4 h-100">
+
+
+                        <div class="text-dark display-4 mb-3">
+
+                            <i class="bi bi-arrow-repeat"></i>
+
+                        </div>
+
+
+                        <h5 class="fw-bold">
+
+                            คนที่อยากเปลี่ยนมุมมอง
+
+                        </h5>
+
+
+                        <p class="text-secondary small">
+
+
+                            สนใจมองชีวิต
+                            ความสัมพันธ์
+                            และตัวตนในมุมใหม่
+
+
+                        </p>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CTA
+         ===================================================== -->
+    <section class="bg-dark text-white py-5">
+
+
+        <div class="container py-5 text-center">
+
+
+            <!-- Icon -->
+            <div class="display-4 text-danger mb-3">
+
+                <i class="bi bi-stars"></i>
+
+            </div>
+
+
+            <!-- Heading -->
+            <h2 class="display-5 fw-bold">
+
+                แล้วคุณล่ะ...
+
+            </h2>
+
+
+            <p class="display-6 text-danger fw-bold">
+
+                กล้าที่จะถูกเกลียดหรือยัง?
+
+            </p>
+
+
+            <p class="text-white-50 mt-3">
+
+                ลองเปิดหนังสือ
+                แล้วตั้งคำถามกับชีวิตของตัวเอง
+
+            </p>
+
+
+            <!-- Back To Top -->
+            <a href="#home" class="btn btn-danger btn-lg mt-3 px-5">
+
+                <i class="bi bi-arrow-up me-2"></i>
+
+                กลับขึ้นด้านบน
+
+            </a>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+    <footer class="bg-black text-white py-4">
+
+
+        <div class="container">
+
+
+            <div class="row align-items-center">
+
+
+                <!-- Footer Left -->
+                <div class="col-md-6 text-center text-md-start">
+
+
+                    <h5 class="fw-bold mb-1">
+
+                        <i class="bi bi-book-half me-2"></i>
+
+                        BOOK<span class="text-danger">.</span>
+
+                    </h5>
+
+
+                    <small class="text-white-50">
+
+                        เว็บไซต์แนะนำหนังสือ
+                        “กล้าที่จะถูกเกลียด”
+
+                    </small>
+
+
+                </div>
+
+
+
+                <!-- Footer Right -->
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+
+
+                    <small class="text-white-50">
+
+                        <i class="bi bi-heart-fill text-danger me-1">
+                        </i>
+
+                        © 2026 Book Recommendation
+
+                    </small>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         BOOTSTRAP JAVASCRIPT
+         ===================================================== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
