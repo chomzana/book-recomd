@@ -1,501 +1,1448 @@
 /* =========================================================
-   STYLE.CSS
-   CSS สำหรับเว็บไซต์แนะนำหนังสือ "กล้าที่จะถูกเกลียด"
-   ใช้งานร่วมกับ Bootstrap 5.3.3
-   ========================================================= */
+   BOOK RECOMMENDATION
+   กล้าที่จะถูกเกลียด
+   Theme : Navy / Blue / Yellow / Pink
+========================================================= */
+
+:root {
+    --navy: #12355b;
+    --navy-dark: #0b2540;
+
+    --blue: #087e8b;
+    --blue-light: #20a4b8;
+
+    --yellow: #ffd166;
+    --yellow-light: #fff3c4;
+
+    --pink: #ef476f;
+    --pink-light: #ffe2e9;
+
+    --cream: #fffaf0;
+    --white: #ffffff;
+
+    --text: #17324d;
+    --text-light: #5f7182;
+
+    --shadow: 0 15px 35px rgba(18, 53, 91, 0.12);
+    --shadow-hover: 0 22px 45px rgba(18, 53, 91, 0.20);
+
+    --radius: 24px;
+}
 
 
-/* =========================
-   1. พื้นฐานเว็บไซต์
-   ========================= */
+/* =========================================================
+   GLOBAL
+========================================================= */
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 75px;
 }
 
 body {
-    font-family: "Segoe UI", "Noto Sans Thai", Tahoma, sans-serif;
-    color: #212529;
-    background-color: #cde6ff;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.8;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+::selection {
+    background: var(--yellow);
+    color: var(--navy-dark);
 }
 
 
-/* =========================
-   2. NAVBAR
-   ========================= */
+/* =========================================================
+   NAVBAR
+========================================================= */
 
-.navbar {
-    min-height: 70px;
-    transition: all 0.3s ease;
+.main-navbar {
+    background: var(--navy-dark);
+    border-bottom: 4px solid var(--yellow);
+    box-shadow: 0 8px 25px rgba(11, 37, 64, 0.2);
+    z-index: 1000;
 }
 
-.navbar-brand {
+.book-logo {
+    color: var(--white) !important;
+    font-size: 1.45rem;
+    font-weight: 900;
     letter-spacing: 1px;
 }
 
-.navbar-brand i {
-    color: #dc3545;
+.book-logo i {
+    color: var(--yellow);
 }
 
-.navbar .nav-link {
-    font-weight: 500;
-    transition: all 0.25s ease;
-    border-radius: 50px;
+.main-navbar .nav-link {
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-weight: 600;
+    margin: 0 4px;
+    padding: 8px 14px !important;
+    border-radius: 30px;
+    transition: 0.3s ease;
 }
 
-.navbar .nav-link:hover,
-.navbar .nav-link.active {
-    color: #ffffff !important;
-    background-color: #dc3545;
+.main-navbar .nav-link:hover {
+    color: var(--navy-dark) !important;
+    background: var(--yellow);
+    transform: translateY(-2px);
 }
 
-.navbar-toggler {
-    border-color: rgba(255, 255, 255, 0.4);
+.buy-nav-link {
+    background: var(--pink);
+    color: var(--white) !important;
+    border-radius: 30px;
+    padding: 8px 18px !important;
+    margin-left: 8px !important;
+}
+
+.buy-nav-link:hover {
+    background: var(--yellow) !important;
+    color: var(--navy-dark) !important;
 }
 
 
-/* =========================
-   3. HERO
-   ========================= */
+/* =========================================================
+   HERO
+========================================================= */
 
-#home {
+.hero-section {
     position: relative;
+    min-height: 680px;
+    display: flex;
+    align-items: center;
     overflow: hidden;
-    min-height: 90vh !important;
+    background:
+        radial-gradient(circle at 10% 20%, rgba(255, 209, 102, 0.35), transparent 25%),
+        radial-gradient(circle at 90% 30%, rgba(32, 164, 184, 0.25), transparent 30%),
+        var(--cream);
 }
 
-#home::before {
+.hero-content {
+    position: relative;
+    z-index: 5;
+    padding: 80px 0;
+}
+
+.hero-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--yellow);
+    color: var(--navy-dark);
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    box-shadow: 5px 5px 0 var(--navy);
+}
+
+.hero-title {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    color: var(--navy-dark);
+    font-size: clamp(2.5rem, 6vw, 5.5rem);
+    line-height: 1.05;
+    font-weight: 900;
+    letter-spacing: -2px;
+}
+
+.hero-title span {
+    color: var(--pink);
+    position: relative;
+}
+
+.hero-description {
+    max-width: 650px;
+    color: var(--text-light);
+    font-size: 1.08rem;
+}
+
+.hero-mini-title {
+    color: var(--blue);
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+.hero-line {
+    width: 80px;
+    height: 5px;
+    background: var(--pink);
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+.next-button,
+.hero-buy-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 13px 25px;
+    border-radius: 50px;
+    font-weight: 800;
+    transition: 0.3s ease;
+}
+
+.next-button {
+    background: var(--navy);
+    color: var(--white);
+    box-shadow: 6px 6px 0 var(--yellow);
+}
+
+.next-button:hover {
+    background: var(--blue);
+    color: var(--white);
+    transform: translateY(-4px);
+}
+
+.hero-buy-button {
+    background: var(--pink);
+    color: var(--white);
+    box-shadow: 6px 6px 0 var(--navy);
+}
+
+.hero-buy-button:hover {
+    background: var(--yellow);
+    color: var(--navy-dark);
+    transform: translateY(-4px);
+}
+
+
+/* HERO STATS */
+
+.hero-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 35px;
+}
+
+.hero-stats > div {
+    background: var(--white);
+    padding: 10px 18px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    border-left: 4px solid var(--blue);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+
+/* HERO BOOK */
+
+.hero-book-area {
+    position: relative;
+    min-height: 570px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-book {
+    position: relative;
+    z-index: 3;
+    width: min(370px, 80%);
+    transform: rotate(3deg);
+    transition: 0.5s ease;
+}
+
+.hero-book:hover {
+    transform: rotate(0deg) translateY(-12px);
+}
+
+.hero-book-image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow:
+        20px 25px 0 var(--yellow),
+        0 25px 50px rgba(11, 37, 64, 0.3);
+}
+
+.book-shadow {
+    position: absolute;
+    width: 300px;
+    height: 35px;
+    background: rgba(18, 53, 91, 0.15);
+    filter: blur(15px);
+    border-radius: 50%;
+    bottom: 60px;
+    z-index: 1;
+}
+
+.book-sticker {
+    position: absolute;
+    right: -35px;
+    top: 35px;
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    background: var(--pink);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 900;
+    font-size: 0.8rem;
+    transform: rotate(12deg);
+    z-index: 5;
+    box-shadow: 6px 6px 0 var(--navy);
+}
+
+.floating-note {
+    position: absolute;
+    z-index: 6;
+    background: var(--white);
+    padding: 12px 18px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.note-one {
+    left: 5%;
+    top: 20%;
+    border-left: 5px solid var(--pink);
+    transform: rotate(-5deg);
+}
+
+.note-two {
+    right: 0;
+    bottom: 20%;
+    border-left: 5px solid var(--blue);
+    transform: rotate(5deg);
+}
+
+
+/* HERO DECORATIONS */
+
+.hero-decoration {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.hero-decoration-one {
+    width: 170px;
+    height: 170px;
+    background: var(--yellow);
+    top: -80px;
+    left: -60px;
+    opacity: 0.8;
+}
+
+.hero-decoration-two {
+    width: 100px;
+    height: 100px;
+    border: 18px solid var(--pink);
+    right: 8%;
+    top: 15%;
+    opacity: 0.6;
+}
+
+.hero-decoration-three {
+    width: 60px;
+    height: 60px;
+    background: var(--blue-light);
+    bottom: 10%;
+    left: 40%;
+    opacity: 0.5;
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about-section {
+    background: var(--white);
+    padding: 100px 0;
+}
+
+.section-label {
+    display: inline-block;
+    color: var(--pink);
+    font-size: 0.8rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.about-title {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 900;
+    color: var(--navy-dark);
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.about-text {
+    color: var(--text-light);
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+}
+
+.topic-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.topic-tags span {
+    background: var(--yellow-light);
+    color: var(--navy-dark);
+    padding: 7px 15px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.topic-tags span:nth-child(2) {
+    background: var(--pink-light);
+}
+
+.topic-tags span:nth-child(3) {
+    background: #dff7fa;
+}
+
+
+/* =========================================================
+   BOOK DISPLAY
+========================================================= */
+
+.book-display {
+    position: relative;
+}
+
+.book-yellow-card {
+    position: relative;
+    background: var(--yellow);
+    border-radius: 35px;
+    padding: 30px;
+    box-shadow: 15px 15px 0 var(--navy);
+    overflow: hidden;
+}
+
+.book-yellow-card::before {
     content: "";
     position: absolute;
-    width: 380px;
-    height: 380px;
-    background-color: rgba(220, 53, 69, 0.08);
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.25);
     border-radius: 50%;
-    top: -130px;
-    right: -100px;
+    top: -70px;
+    right: -50px;
 }
 
-#home::after {
+.book-image-wrap {
+    position: relative;
+    z-index: 2;
+    background: var(--white);
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.book-main-image {
+    width: 100%;
+    max-height: 470px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.book-badge {
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    background: var(--pink);
+    color: var(--white);
+    padding: 8px 15px;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    transform: rotate(-5deg);
+    box-shadow: 4px 4px 0 var(--navy);
+}
+
+.detail-button,
+.reference-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    border: 0;
+    padding: 13px 18px;
+    border-radius: 50px;
+    margin-top: 18px;
+    font-weight: 800;
+    transition: 0.3s ease;
+}
+
+.detail-button {
+    background: var(--navy);
+    color: var(--white);
+}
+
+.detail-button:hover {
+    background: var(--pink);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+.reference-button {
+    background: var(--white);
+    color: var(--navy);
+    border: 2px solid var(--navy);
+}
+
+.reference-button:hover {
+    background: var(--blue);
+    border-color: var(--blue);
+    color: var(--white);
+}
+
+
+/* =========================================================
+   IMAGE SOURCE / CREDIT
+========================================================= */
+
+.image-source-box {
+    background: #f6f9fb;
+    border: 1px solid #dbe6ed;
+    border-left: 5px solid var(--blue);
+    border-radius: 15px;
+    padding: 16px 18px;
+    margin-top: 18px;
+}
+
+.image-source-title {
+    color: var(--navy);
+    font-size: 0.85rem;
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+
+.image-credit {
+    color: var(--text-light);
+    font-size: 0.78rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.modal-content {
+    border: 0;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 25px 70px rgba(11, 37, 64, 0.3);
+}
+
+.modal-header {
+    background: var(--navy);
+    color: var(--white);
+    border: 0;
+    padding: 18px 25px;
+}
+
+.modal-title {
+    font-weight: 900;
+}
+
+.modal-header .btn-close {
+    filter: brightness(0) invert(1);
+}
+
+.modal-body {
+    background: var(--cream);
+    padding: 30px;
+}
+
+.modal-book-card {
+    background: var(--white);
+    padding: 15px;
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    height: 100%;
+}
+
+.modal-book-card img {
+    width: 100%;
+    height: 420px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.modal-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--yellow);
+    color: var(--navy-dark);
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+.book-info-box {
+    background: var(--white);
+    border-radius: 18px;
+    padding: 20px;
+    margin-top: 25px;
+    border-left: 5px solid var(--pink);
+}
+
+.book-info-box h5 {
+    color: var(--navy);
+    font-weight: 900;
+}
+
+.book-info-box p {
+    margin-bottom: 5px;
+    color: var(--text-light);
+}
+
+.close-button {
+    background: var(--pink);
+    color: var(--white);
+    border: 0;
+    border-radius: 50px;
+    padding: 9px 20px;
+    font-weight: 800;
+}
+
+.close-button:hover {
+    background: var(--navy);
+    color: var(--white);
+}
+
+
+/* =========================================================
+   QUOTE
+========================================================= */
+
+.quote-section {
+    position: relative;
+    background: var(--navy);
+    color: var(--white);
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+.quote-section::before {
     content: "";
     position: absolute;
     width: 250px;
     height: 250px;
-    background-color: rgba(33, 37, 41, 0.05);
+    background: var(--blue);
     border-radius: 50%;
-    bottom: -100px;
-    left: -80px;
+    right: -80px;
+    top: -100px;
+    opacity: 0.5;
 }
 
-#home .container {
-    position: relative;
-    z-index: 2;
-}
-
-#home h1 {
-    letter-spacing: -2px;
-}
-
-#home h1 .text-danger {
-    position: relative;
-}
-
-#home h1 .text-danger::after {
+.quote-section::after {
     content: "";
     position: absolute;
-    height: 8px;
-    background-color: rgba(220, 53, 69, 0.18);
-    left: 0;
-    right: 0;
-    bottom: 3px;
-    z-index: -1;
+    width: 180px;
+    height: 180px;
+    background: var(--yellow);
+    border-radius: 50%;
+    left: -70px;
+    bottom: -80px;
+    opacity: 0.6;
 }
 
-#home .lead {
-    max-width: 650px;
-    line-height: 1.9;
-}
-
-#home .col-lg-5 > div {
-    transition: all 0.4s ease;
-}
-
-#home .col-lg-5 > div:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.16) !important;
-}
-
-#home img {
-    max-height: 620px;
-    width: auto;
-    object-fit: contain;
-}
-
-
-/* =========================
-   4. BUTTONS
-   ========================= */
-
-.btn {
-    border-radius: 50px;
-    font-weight: 600;
-    transition: all 0.25s ease;
-}
-
-.btn-danger {
-    background-color: #dc3545;
-    border-color: #dc3545;
-}
-
-.btn-danger:hover {
-    background-color: #bb2d3b;
-    border-color: #b02a37;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(220, 53, 69, 0.25);
-}
-
-.btn-outline-dark:hover {
-    transform: translateY(-2px);
-}
-
-
-/* =========================
-   5. MODAL
-   ========================= */
-
-#bookModal .modal-content {
-    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.25);
-}
-
-#bookModal .modal-header {
-    border-bottom: 0;
-}
-
-#bookModal .modal-body img {
-    max-height: 550px;
-    object-fit: contain;
-    transition: transform 0.3s ease;
-}
-
-#bookModal .modal-body img:hover {
-    transform: scale(1.02);
-}
-
-#bookModal .border-dark {
-    border-color: #212529 !important;
-}
-
-
-/* =========================
-   6. ABOUT THE BOOK
-   ========================= */
-
-#about {
-    position: relative;
-}
-
-#about .border-dark {
-    border-width: 2px !important;
-    background-color: #ffffff;
-    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.06);
-}
-
-#about h2 {
-    letter-spacing: -1px;
-}
-
-#about .row.g-3 > div > div {
-    transition: all 0.3s ease;
-}
-
-#about .row.g-3 > div > div:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-    border-color: #dc3545 !important;
-}
-
-#about .bi {
-    transition: transform 0.3s ease;
-}
-
-#about .row.g-3 > div > div:hover .bi {
-    transform: scale(1.15);
-}
-
-
-/* =========================
-   7. BIG QUOTE
-   ========================= */
-
-.bg-danger.py-5 {
-    position: relative;
-    overflow: hidden;
-}
-
-.bg-danger.py-5::before {
-    content: "“";
-    position: absolute;
-    font-size: 280px;
-    line-height: 1;
-    top: -80px;
-    left: 5%;
-    opacity: 0.08;
-    font-family: Georgia, serif;
-}
-
-.bg-danger.py-5::after {
-    content: "”";
-    position: absolute;
-    font-size: 280px;
-    line-height: 1;
-    bottom: -170px;
-    right: 5%;
-    opacity: 0.08;
-    font-family: Georgia, serif;
-}
-
-.bg-danger.py-5 .container {
+.quote-content {
     position: relative;
     z-index: 2;
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
 }
 
-.bg-danger.py-5 .display-4 {
-    opacity: 0.9;
+.quote-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 25px;
+    background: var(--yellow);
+    color: var(--navy);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
 }
 
-.bg-danger.py-5 .display-4.fw-bold {
-    line-height: 1.35;
+.quote-text {
+    font-size: clamp(1.8rem, 4vw, 3.2rem);
+    font-weight: 900;
+    line-height: 1.3;
 }
 
-
-/* =========================
-   8. KEY IDEAS
-   ========================= */
-
-#ideas .card {
-    border-radius: 20px;
-    overflow: hidden;
-    transition: all 0.35s ease;
-}
-
-#ideas .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.12) !important;
-}
-
-#ideas .card-body {
-    min-height: 360px;
-}
-
-#ideas .card .display-4 {
-    transition: transform 0.3s ease;
-}
-
-#ideas .card:hover .display-4 {
-    transform: scale(1.1);
-}
-
-#ideas .card h3 {
-    line-height: 1.35;
-}
-
-#ideas .badge {
-    letter-spacing: 0.5px;
+.quote-description {
+    color: rgba(255, 255, 255, 0.75);
+    margin-top: 20px;
 }
 
 
-/* =========================
-   9. WHO SHOULD READ
-   ========================= */
+/* =========================================================
+   IDEAS
+========================================================= */
 
-#reader .border {
-    background-color: #ffffff;
-    transition: all 0.3s ease;
+.ideas-section {
+    padding: 100px 0;
+    background: var(--cream);
 }
 
-#reader .border:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+.section-heading {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    text-align: center;
 }
 
-#reader .display-4 {
-    transition: transform 0.3s ease;
+.section-heading h2 {
+    color: var(--navy-dark);
+    font-weight: 900;
+    font-size: clamp(2rem, 4vw, 3.3rem);
 }
 
-#reader .border:hover .display-4 {
-    transform: scale(1.12);
+.section-heading p {
+    color: var(--text-light);
 }
 
-
-/* =========================
-   10. CTA
-   ========================= */
-
-.bg-dark.py-5 {
+.idea-card {
     position: relative;
+    height: 100%;
+    padding: 35px 30px;
+    border-radius: 25px;
+    background: var(--white);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: 0.4s ease;
+}
+
+.idea-card:hover {
+    transform: translateY(-10px) rotate(-1deg);
+    box-shadow: var(--shadow-hover);
+}
+
+.idea-yellow {
+    border-top: 7px solid var(--yellow);
+}
+
+.idea-blue {
+    border-top: 7px solid var(--blue);
+}
+
+.idea-pink {
+    border-top: 7px solid var(--pink);
+}
+
+.idea-number {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 4rem;
+    font-weight: 900;
+    color: rgba(18, 53, 91, 0.06);
+}
+
+.idea-icon {
+    width: 65px;
+    height: 65px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+}
+
+.idea-yellow .idea-icon {
+    background: var(--yellow-light);
+    color: #d99b00;
+}
+
+.idea-blue .idea-icon {
+    background: #dff7fa;
+    color: var(--blue);
+}
+
+.idea-pink .idea-icon {
+    background: var(--pink-light);
+    color: var(--pink);
+}
+
+.idea-label {
+    color: var(--pink);
+    font-size: 0.75rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.idea-card h3 {
+    color: var(--navy);
+    font-weight: 900;
+    margin: 8px 0 15px;
+}
+
+.idea-card p {
+    color: var(--text-light);
+}
+
+
+/* =========================================================
+   BOOK JOURNEY
+========================================================= */
+
+.journey-section {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.journey-title {
+    color: var(--navy-dark);
+    font-weight: 900;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+.journey-text {
+    color: var(--text-light);
+}
+
+.journey-list {
+    position: relative;
+    margin-top: 35px;
+}
+
+.journey-list::before {
+    content: "";
+    position: absolute;
+    left: 19px;
+    top: 5px;
+    bottom: 5px;
+    width: 3px;
+    background: var(--yellow);
+}
+
+.journey-item {
+    position: relative;
+    padding: 0 0 30px 60px;
+}
+
+.journey-item:last-child {
+    padding-bottom: 0;
+}
+
+.journey-item::before {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 3px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: var(--pink);
+    border: 5px solid var(--white);
+    box-shadow: 0 0 0 2px var(--pink);
+}
+
+.journey-item h4 {
+    color: var(--navy);
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+
+.journey-item p {
+    color: var(--text-light);
+    margin: 0;
+}
+
+
+/* =========================================================
+   READERS
+========================================================= */
+
+.reader-section {
+    padding: 100px 0;
+    background: var(--yellow-light);
+}
+
+.reader-card {
+    height: 100%;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: var(--shadow);
+    transition: 0.3s ease;
+    border-bottom: 5px solid var(--blue);
+}
+
+.reader-card:hover {
+    transform: translateY(-8px);
+}
+
+.reader-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--blue);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 18px;
+}
+
+.reader-card h4 {
+    color: var(--navy);
+    font-weight: 900;
+}
+
+.reader-card p {
+    color: var(--text-light);
+}
+
+
+/* =========================================================
+   BUY SECTION
+========================================================= */
+
+.buy-section {
+    position: relative;
+    padding: 100px 0;
+    background:
+        linear-gradient(135deg, var(--navy-dark), var(--navy));
     overflow: hidden;
 }
 
-.bg-dark.py-5::before {
+.buy-section::before {
     content: "";
     position: absolute;
     width: 300px;
     height: 300px;
-    border: 1px solid rgba(220, 53, 69, 0.25);
+    background: var(--blue);
     border-radius: 50%;
-    top: -170px;
-    left: -100px;
+    top: -150px;
+    right: -100px;
+    opacity: 0.3;
 }
 
-.bg-dark.py-5::after {
+.buy-section::after {
     content: "";
     position: absolute;
     width: 220px;
     height: 220px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: var(--pink);
     border-radius: 50%;
     bottom: -130px;
-    right: -70px;
+    left: -80px;
+    opacity: 0.25;
 }
 
-.bg-dark.py-5 .container {
+.buy-card {
     position: relative;
     z-index: 2;
+    background: var(--white);
+    border-radius: 30px;
+    padding: 45px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+}
+
+.buy-label {
+    display: inline-block;
+    background: var(--yellow);
+    color: var(--navy-dark);
+    padding: 7px 15px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.buy-card h2 {
+    color: var(--navy-dark);
+    font-weight: 900;
+    margin: 15px 0;
+}
+
+.buy-card > p {
+    color: var(--text-light);
+}
+
+.buy-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 13px 24px;
+    border-radius: 50px;
+    background: var(--pink);
+    color: var(--white);
+    font-weight: 800;
+    transition: 0.3s ease;
+}
+
+.buy-button:hover {
+    background: var(--navy);
+    color: var(--white);
+    transform: translateY(-4px);
+}
+
+.buy-button.secondary {
+    background: var(--blue);
+}
+
+.buy-button.secondary:hover {
+    background: var(--yellow);
+    color: var(--navy-dark);
+}
+
+.buy-note {
+    font-size: 0.78rem;
+    color: var(--text-light);
+    margin-top: 20px;
+}
+
+.purchase-source {
+    font-size: 0.75rem;
+    color: #71808c;
+    margin-top: 10px;
 }
 
 
-/* =========================
-   11. FOOTER
-   ========================= */
+/* MINI BOOK IN BUY SECTION */
 
-footer {
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+.buy-book-mini {
+    position: relative;
+    width: 230px;
+    margin: auto;
+    transform: rotate(4deg);
+    transition: 0.4s ease;
 }
 
-footer .bi-book-half {
-    color: #dc3545;
+.buy-book-mini:hover {
+    transform: rotate(0deg) translateY(-10px);
+}
+
+.buy-book-mini img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 15px 15px 0 var(--yellow);
+}
+
+.buy-book-back {
+    position: absolute;
+    width: 80px;
+    height: 100px;
+    right: -45px;
+    bottom: 10px;
+    border: 5px solid var(--pink);
+    border-radius: 10px;
+    transform: rotate(-10deg);
+}
+
+.buy-book-tag {
+    position: absolute;
+    top: -20px;
+    left: -30px;
+    background: var(--yellow);
+    color: var(--navy);
+    padding: 8px 13px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 900;
+    transform: rotate(-8deg);
 }
 
 
-/* =========================
-   12. EFFECTS
-   ========================= */
+/* =========================================================
+   CTA
+========================================================= */
 
-.shadow-soft {
-    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+.cta-section {
+    padding: 100px 0;
+    background: var(--pink);
+    color: var(--white);
+    text-align: center;
 }
 
-.text-gradient {
-    background: linear-gradient(90deg, #dc3545, #8b1e2d);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+.cta-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.cta-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    background: var(--yellow);
+    color: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.cta-title {
+    font-weight: 900;
+    font-size: clamp(2rem, 5vw, 4rem);
+}
+
+.cta-description {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 14px 28px;
+    border-radius: 50px;
+    background: var(--white);
+    color: var(--navy);
+    font-weight: 900;
+    transition: 0.3s ease;
+}
+
+.cta-button:hover {
+    background: var(--yellow);
+    color: var(--navy-dark);
+    transform: translateY(-4px);
 }
 
 
-/* =========================
-   13. RESPONSIVE
-   ========================= */
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+    background: var(--navy-dark);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 35px 0;
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+.site-footer strong {
+    color: var(--yellow);
+}
+
+
+/* =========================================================
+   BUTTON ANIMATION
+========================================================= */
+
+.detail-button i,
+.reference-button i,
+.buy-button i,
+.next-button i,
+.hero-buy-button i,
+.cta-button i {
+    transition: 0.3s ease;
+}
+
+.detail-button:hover i,
+.reference-button:hover i,
+.buy-button:hover i,
+.next-button:hover i,
+.hero-buy-button:hover i,
+.cta-button:hover i {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   SCROLL ANIMATION
+========================================================= */
+
+.idea-card,
+.reader-card,
+.buy-card,
+.book-yellow-card {
+    animation: fadeUp 0.8s ease both;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
 
 @media (max-width: 991.98px) {
 
-    #home {
-        min-height: auto !important;
-        padding-top: 80px;
-        padding-bottom: 80px;
-    }
-
-    #home h1 {
-        font-size: 4rem;
-    }
-
-    #home .col-lg-5 > div {
-        margin-top: 20px;
-    }
-
-    #about .display-5,
-    #ideas .display-5,
-    #reader .display-5 {
-        font-size: 2.5rem;
-    }
-}
-
-
-@media (max-width: 767.98px) {
-
-    html {
-        scroll-padding-top: 65px;
-    }
-
-    .navbar {
-        min-height: 60px;
-    }
-
-    #home {
-        text-align: center;
-        padding-top: 60px;
-        padding-bottom: 60px;
-    }
-
-    #home h1 {
-        font-size: 3rem;
-        letter-spacing: -1px;
-    }
-
-    #home .d-flex {
-        justify-content: center;
-    }
-
-    #home img {
-        max-height: 500px;
-    }
-
-    #ideas .card-body {
+    .hero-section {
         min-height: auto;
     }
 
-    .bg-danger.py-5 .display-4.fw-bold {
-        font-size: 2.3rem;
+    .hero-content {
+        padding: 70px 0 40px;
+        text-align: center;
     }
 
-    #about .border {
-        padding: 1.5rem !important;
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-line {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-stats {
+        justify-content: center;
+    }
+
+    .hero-book-area {
+        min-height: 500px;
+    }
+
+    .about-section,
+    .ideas-section,
+    .journey-section,
+    .reader-section,
+    .buy-section {
+        padding: 75px 0;
+    }
+
+    .book-yellow-card {
+        margin-top: 30px;
+    }
+
+    .floating-note {
+        display: none;
+    }
+
+    .main-navbar .nav-link {
+        margin: 3px 0;
+    }
+
+    .buy-nav-link {
+        display: inline-block;
+        margin-top: 5px;
     }
 }
 
 
-@media (max-width: 575.98px) {
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
 
-    #home h1 {
-        font-size: 2.5rem;
+@media (max-width: 767.98px) {
+
+    body {
+        font-size: 0.95rem;
     }
 
-    #home .lead {
-        font-size: 1rem;
+    .hero-content {
+        padding: 55px 15px 30px;
     }
 
-    #home .btn {
+    .hero-title {
+        font-size: 2.8rem;
+        letter-spacing: -1px;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .next-button,
+    .hero-buy-button {
         width: 100%;
     }
 
-    #home .d-flex {
-        flex-direction: column;
-        gap: 0.75rem !important;
+    .hero-stats {
+        display: grid;
+        grid-template-columns: 1fr;
     }
 
-    #home img {
-        max-height: 420px;
+    .hero-stats > div {
+        text-align: center;
     }
 
-    #about h2 {
-        font-size: 2rem;
+    .hero-book-area {
+        min-height: 430px;
     }
 
-    .bg-danger.py-5 .display-4.fw-bold {
-        font-size: 1.9rem;
+    .hero-book {
+        width: 65%;
     }
 
-    .bg-dark.py-5 .display-5 {
+    .book-sticker {
+        width: 75px;
+        height: 75px;
+        right: -25px;
+        font-size: 0.65rem;
+    }
+
+    .hero-decoration-two {
+        right: 3%;
+    }
+
+    .about-section,
+    .ideas-section,
+    .journey-section,
+    .reader-section,
+    .buy-section,
+    .cta-section,
+    .quote-section {
+        padding: 65px 0;
+    }
+
+    .about-title {
         font-size: 2.2rem;
+    }
+
+    .book-yellow-card {
+        padding: 20px;
+        box-shadow: 10px 10px 0 var(--navy);
+    }
+
+    .modal-body {
+        padding: 20px;
+    }
+
+    .modal-book-card img {
+        height: 300px;
+    }
+
+    .quote-text {
+        font-size: 1.8rem;
+    }
+
+    .idea-card {
+        padding: 28px 22px;
+    }
+
+    .buy-card {
+        padding: 30px 22px;
+    }
+
+    .buy-book-mini {
+        width: 180px;
+        margin-bottom: 35px;
+    }
+
+    .buy-book-back {
+        width: 60px;
+        height: 80px;
+        right: -30px;
+    }
+
+    .cta-title {
+        font-size: 2.3rem;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .hero-title {
+        font-size: 2.35rem;
+    }
+
+    .hero-label {
+        font-size: 0.7rem;
+        padding: 7px 13px;
+    }
+
+    .hero-book {
+        width: 72%;
+    }
+
+    .book-yellow-card {
+        padding: 15px;
+    }
+
+    .book-main-image {
+        max-height: 380px;
+    }
+
+    .topic-tags {
+        gap: 7px;
+    }
+
+    .topic-tags span {
+        font-size: 0.75rem;
+        padding: 6px 11px;
+    }
+
+    .journey-item {
+        padding-left: 50px;
+    }
+
+    .journey-list::before {
+        left: 16px;
+    }
+
+    .journey-item::before {
+        left: 5px;
+    }
+
+    .buy-button {
+        width: 100%;
+        margin-bottom: 10px;
     }
 }

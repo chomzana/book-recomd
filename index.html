@@ -4,360 +4,557 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>กล้าที่จะถูกเกลียด | หนังสือน่าอ่าน</title>
 
-    <!-- Bootstrap 5 -->
+    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- CSS ของเว็บไซต์ -->
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
+<body>
 
-<body class="bg-light">
-
-
-    <!-- =====================================================
+    <!-- =========================================================
          NAVBAR
-         ===================================================== -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
-
+         ========================================================= -->
+    <nav class="navbar navbar-expand-lg sticky-top main-navbar">
         <div class="container">
-
-            <!-- Logo -->
-            <a class="navbar-brand fw-bold fs-4" href="#home">
-
+            <a class="navbar-brand book-logo" href="#home">
                 <i class="bi bi-book-half me-2"></i>
-
-                BOOK<span class="text-danger">.</span>
-
+                NHT<span>BOOK.</span>
             </a>
 
-
-            <!-- Mobile Menu Button -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
                 aria-controls="navbarMenu" aria-expanded="false" aria-label="เปิดเมนู">
-
-                <span class="navbar-toggler-icon"></span>
-
+                <i class="bi bi-list"></i>
             </button>
 
-
-            <!-- Menu -->
             <div class="collapse navbar-collapse" id="navbarMenu">
-
                 <ul class="navbar-nav ms-auto text-center">
-
-
-                    <!-- Home -->
                     <li class="nav-item">
-
-                        <a class="nav-link active px-3" href="#home">
-
-                            <i class="bi bi-house-door me-1"></i>
-
-                            หน้าแรก
-
+                        <a class="nav-link active" href="#home">
+                            <i class="bi bi-house-door"></i> HOME
                         </a>
-
                     </li>
-
-
-                    <!-- About -->
                     <li class="nav-item">
-
-                        <a class="nav-link px-3" href="#about">
-
-                            <i class="bi bi-book me-1"></i>
-
-                            เกี่ยวกับหนังสือ
-
+                        <a class="nav-link" href="#about">
+                            <i class="bi bi-book"></i> ABOUT
                         </a>
-
                     </li>
-
-
-                    <!-- Ideas -->
                     <li class="nav-item">
-
-                        <a class="nav-link px-3" href="#ideas">
-
-                            <i class="bi bi-lightbulb me-1"></i>
-
-                            แนวคิดสำคัญ
-
+                        <a class="nav-link" href="#ideas">
+                            <i class="bi bi-lightbulb"></i> IDEAS
                         </a>
-
                     </li>
-
-
-                    <!-- Reader -->
                     <li class="nav-item">
-
-                        <a class="nav-link px-3" href="#reader">
-
-                            <i class="bi bi-people me-1"></i>
-
-                            เหมาะกับใคร
-
+                        <a class="nav-link" href="#recommended">
+                            <i class="bi bi-journal-bookmark"></i> RECOMMENDATION
                         </a>
-
                     </li>
-
-
+                    <li class="nav-item">
+                        <a class="nav-link buy-nav-link" href="#buy">
+                            <i class="bi bi-cart3"></i> ซื้อหนังสือ
+                        </a>
+                    </li>
                 </ul>
-
             </div>
-
         </div>
-
     </nav>
 
-
-
-    <!-- =====================================================
-
-   <!-================= HERO ================= -->
-    <section id="home" class="bg-light text-dark min-vh-100 d-flex align-items-center">
-
+    <!-- =========================================================
+         1. HERO SECTION (หน้าแรกตามธีมหลัก)
+         ========================================================= -->
+    <section id="home" class="hero-section">
+        <div class="hero-decoration hero-decoration-one"></div>
+        <div class="hero-decoration hero-decoration-two"></div>
+        <div class="hero-decoration hero-decoration-three"></div>
         <div class="container">
-
-            <div class="row align-items-center g-5">
-
-
-                <!-- ================= LEFT : คำโปรย ================= -->
+            <div class="row align-items-center g-5"> <!-- LEFT -->
                 <div class="col-lg-7">
+                    <div class="hero-content"> <span class="hero-label"> <i class="bi bi-stars me-2"></i> BOOK
+                            RECOMMENDATION </span>
+                        <h1 class="hero-title"> <span>กล้าที่จะ</span> <br> ถูกเกลียด </h1>
+                        <div class="hero-line"></div>
+                        <p class="hero-description"> หนังสือที่จะชวนให้คุณตั้งคำถามกับชีวิต ความคาดหวังของคนอื่น
+                            และความกล้าที่จะเป็นตัวเอง </p>
+                        <div class="hero-buttons">
+                            <a href="#about" class="next-button">
+                                <i class="bi bi-book-open">
+                                </i>เกี่ยวกับหนังสือ </a>
+                            <a href="#recommended" class="hero-buy-button">
+                                <iclass="bi bi-journal-bookmark>
+                                    </i>หนังสือแนะนำอื่น ๆ
+                            </a>
+                        </div> <!-- Mini Stats -->
 
-                    <!-- คำโปรยหัวข้อ -->
-                    <p class="text-danger fw-bold fs-5 mb-3">
-
-                        <i class="bi bi-stars me-2"></i>
-
-                        BOOK RECOMMENDATION
-
-                    </p>
-
-
-                    <!-- ชื่อหนังสือ -->
-                    <h1 class="display-1 fw-bold lh-1">
-
-                        กล้าที่จะ
-
-                        <br>
-
-                        <span class="text-danger">
-                            ถูกเกลียด
-                        </span>
-
-                    </h1>
-
-
-                    <!-- คำโปรยหนังสือ -->
-                    <p class="lead text-dark mt-4">
-
-                        หนังสือที่จะชวนคุณตั้งคำถามกับชีวิต
-                        ความคาดหวังของคนอื่น
-                        และความกล้าที่จะเป็นตัวเอง
-
-                    </p>
-
-                    <!-- ปุ่ม -->
-                    <div class="d-flex gap-3 flex-wrap mt-4">
-
-
-                        <!-- ไปส่วน About -->
-                        <a href="#about" class="btn btn-danger btn-lg px-4">
-
-                            <i class="bi bi-book-open me-2"></i>
-
-                            เกี่ยวกับหนังสือ
-
-                        </a>
-
-
-                        <!-- ไปส่วน Ideas -->
-                        <a href="#ideas" class="btn btn-outline-dark btn-lg px-4">
-
-                            <i class="bi bi-lightbulb me-2"></i>
-
-                            ดูแนวคิดสำคัญ
-
-                        </a>
-
+                        <div class="hero-stats">
+                            <div> <span>#จิตวิทยา</span> </div>
+                            <div> <span>#การใช้ชีวิต</span> </div>
+                            <div> <span>#พัฒนาตัวเอง</span> </div>
+                        </div>
                     </div>
-
-                </div>
-
-
-                <!-- ================= RIGHT : รูปหนังสือ ================= -->
-                <div class="col-lg-5 text-center">
-
-                    <div class="bg-dark bg-opacity-10 rounded-4 p-4 shadow">
-
-                        <!-- รูปปกหนังสือ -->
-                        <img src="../book-recomd/Images/book-in.jpg" alt="ปกหน้าหนังสือกล้าที่จะถูกเกลียด"
-                            class="img-fluid rounded-3 shadow">
-                        </p>
-
-                        <!-- ปุ่มดูรายละเอียด -->
-                        <button type="button" class="btn btn-danger px-4 py-2" data-bs-toggle="modal"
-                            data-bs-target="#bookModal">
-
-                            <i class="bi bi-images me-2"></i>
-
-                            ดูรายละเอียดเพิ่มเติม
-
-                        </button>
-
+                </div> <!-- RIGHT : BOOK -->
+                <div class="col-lg-5">
+                    <div class="hero-book-area">
+                        <div class="floating-note note-one">
+                            <i class="bi bi-lightbulb-fill">
+                            </i> เปลี่ยนมุมมอง
+                        </div>
+                        <div class="floating-note note-two">
+                            <i class="bi bi-heart-fill">
+                            </i> เป็นตัวเอง
+                        </div>
+                        <div class="book-shadow"></div>
+                        <div class="hero-book"> <img src="../book-recomd/Images/book-in.jpg"
+                                alt="ปกหน้าหนังสือกล้าที่จะถูกเกลียด" class="hero-book-image"> </div>
+                        <div class="book-sticker"> <i class="bi bi-bookmark-heart-fill"></i> MUST READ </div>
                     </div>
-
                 </div>
-
-
             </div>
-
         </div>
-
     </section>
 
-    <!-- =====================================================
-         BOOK MODAL
-         ===================================================== -->
-    <div class="modal fade" id="bookModal" tabindex="-1" aria-labelledby="bookModalLabel" aria-hidden="true">
+    <!-- =========================================================
+         2. ABOUT SECTION (ส่วนเนื้อหาเน้นข้อความ + ปุ่มรายละเอียด - ไม่มีรูป)
+         ========================================================= -->
+    <section id="about" class="about-section py-5">
+        <div class="container py-4">
+            <div class="row g-4 align-items-stretch">
 
+                <!-- การ์ดเนื้อหาข้อมูลหลัก -->
+                <div class="col-lg-8">
+                    <div
+                        class="about-card p-4 p-md-5 rounded-4 bg-white shadow-lg border-0 h-100 position-relative overflow-hidden">
+                        <div class="card-accent-bar"></div>
+
+                        <span
+                            class="section-badge text-uppercase fw-bold text-danger bg-danger-subtle px-3 py-1 rounded-pill mb-3 d-inline-flex align-items-center">
+                            <i class="bi bi-info-circle me-2"></i> ABOUT THE BOOK
+                        </span>
+
+                        <h2 class="about-title display-6 fw-extrabold mb-3 text-dark">
+                            หนังสือที่ชวนให้เรา<br>
+                            <span class="text-gradient">มองชีวิตในมุมใหม่</span>
+                        </h2>
+
+                        <p class="about-text fs-5 lh-base text-secondary mb-3">
+                            <strong class="text-dark">“กล้าที่จะถูกเกลียด”</strong>
+                            เป็นหนังสือที่นำเสนอแนวคิดทางจิตวิทยาของ <em>อัลเฟรด แอดเลอร์ (Alfred Adler)</em>
+                            ผ่านบทสนทนาอันเข้มข้นระหว่างนักปรัชญากับชายหนุ่ม
+                        </p>
+
+                        <div class="mini-quote-box p-3 rounded-3 my-3 bg-light border-start border-4 border-danger">
+                            <p class="mb-0 fs-6 text-dark fst-italic">
+                                “คุณไม่ได้มีชีวิตอยู่เพื่อทำตามความคาดหวังของคนอื่น
+                                และคนอื่นก็ไม่ได้มีชีวิตอยู่เพื่อทำตามความคาดหวังของคุณเช่นกัน”
+                            </p>
+                        </div>
+
+                        <p class="about-text fs-6 text-muted mb-4">
+                            หนังสือเล่มนี้จะช่วยปลดล็อกความคิดจากกรอบความกลัว
+                            ปลดแอกจากการต้องการได้รับการยอมรับจากคนรอบข้าง
+                            และมอบความกล้าหาญในการเลือกวิถีชีวิตที่เป็นของคุณเองอย่างแท้จริง
+                        </p>
+
+                        <div class="topic-tags d-flex flex-wrap gap-2">
+                            <span
+                                class="tag-badge bg-primary-subtle text-primary border border-primary-subtle px-3 py-2 rounded-pill">
+                                <i class="bi bi-person-fill me-1"></i> จิตวิทยาแอดเลอร์
+                            </span>
+                            <span
+                                class="tag-badge bg-success-subtle text-success border border-success-subtle px-3 py-2 rounded-pill">
+                                <i class="bi bi-compass me-1"></i> ปรัชญาการใช้ชีวิต
+                            </span>
+                            <span
+                                class="tag-badge bg-warning-subtle text-warning-emphasis border border-warning-subtle px-3 py-2 rounded-pill">
+                                <i class="bi bi-person-check me-1"></i> การค้นพบอิสรภาพ
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- การ์ดปุ่มกดดูรายละเอียดเบื้องต้น (เน้น Typography และ UI) -->
+                <div class="col-lg-4">
+                    <div
+                        class="info-action-card p-4 p-md-5 rounded-4 bg-dark text-white shadow-lg h-100 d-flex flex-column justify-content-between position-relative">
+                        <div>
+                            <div class="icon-box-shape mb-3 bg-danger text-white rounded-3 d-inline-flex align-items-center justify-content-center"
+                                style="width: 50px; height: 50px;">
+                                <i class="bi bi-journal-text fs-3"></i>
+                            </div>
+                            <h3 class="fw-bold mb-2">ข้อมูลเบื้องต้น</h3>
+                            <p class="text-white-50 fs-6 mb-4">
+                                คลิกปุ่มด้านล่างเพื่อเปิดดูรายละเอียดฉบับย่อ ข้อมูลผู้เขียน จำนวนหน้า สารบัญ
+                                และเนื้อเรื่องย่อเบื้องต้น
+                            </p>
+                        </div>
+
+                        <div>
+                            <button type="button"
+                                class="btn btn-danger btn-lg w-100 rounded-pill shadow-sm py-3 fs-6 fw-bold btn-pulse mb-2"
+                                data-bs-toggle="modal" data-bs-target="#bookModal">
+                                <i class="bi bi-file-earmark-text me-2"></i> ดูรายละเอียดหนังสือเบื้องต้น
+                            </button>
+                            <small class="text-white-50 d-block text-center fs-7">
+                                <i class="bi bi-shield-check me-1"></i> อ่านสรุปข้อมูลฉบับย่อได้ทันที
+                            </small>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- =========================================================
+         QUOTE SECTION
+         ========================================================= -->
+    <section class="quote-section py-5 text-white position-relative" style="background-color: #123258;">
+        <div class="container text-center py-4">
+            <div class="quote-icon mb-3">
+                <span
+                    class="bg-warning text-dark p-3 rounded-circle d-inline-flex align-items-center justify-content-center"
+                    style="width: 50px; height: 50px;">
+                    <i class="bi bi-chat-quote-fill fs-4"></i>
+                </span>
+            </div>
+            <h2 class="quote-text fw-bold fs-1 mb-2">
+                “คุณไม่จำเป็นต้อง<br>เป็นที่ชื่นชอบของทุกคน”
+            </h2>
+            <p class="quote-description text-white-50 fs-6">
+                เพราะชีวิตของคุณ เป็นของคุณเอง
+            </p>
+        </div>
+    </section>
+    <!-- =========================================================
+         KEY IDEAS SECTION
+         ========================================================= -->
+    <section id="ideas" class="ideas-section">
+        <div class="container">
+            <div class="section-heading text-center">
+                <p class="section-label"> <i class="bi bi-lightbulb me-2"></i> KEY IDEAS </p>
+                <h2> 3 แนวคิดที่น่าสนใจ </h2>
+                <p> แนวคิดสำคัญที่ปรากฏในหนังสือ </p>
+            </div>
+            <div class="row g-4"> <!-- IDEA 01 -->
+                <div class="col-md-4">
+                    <div class="idea-card idea-yellow">
+                        <div class="idea-number"> 01 </div>
+                        <div class="idea-icon"> <i class="bi bi-person-x-fill"></i> </div> <span class="idea-label">
+                            IDEA 01 </span>
+                        <h3> เลิกใช้ชีวิต <br> ตามสายตาคนอื่น </h3>
+                        <p> เราไม่สามารถควบคุมความคิดของคนอื่นได้ แต่เราสามารถเลือกการกระทำ และวิธีใช้ชีวิตของตัวเองได้
+                        </p>
+                    </div>
+                </div> <!-- IDEA 02 -->
+                <div class="col-md-4">
+                    <div class="idea-card idea-blue">
+                        <div class="idea-number"> 02 </div>
+                        <div class="idea-icon"> <i class="bi bi-person-heart"></i> </div> <span class="idea-label"> IDEA
+                            02 </span>
+                        <h3> กล้าที่จะ <br> เป็นตัวเอง </h3>
+                        <p> การใช้ชีวิตในแบบของตัวเอง อาจไม่ได้รับการยอมรับจากทุกคน
+                            แต่ทำให้เราเลือกทิศทางชีวิตได้ด้วยตัวเอง </p>
+                    </div>
+                </div> <!-- IDEA 03 -->
+                <div class="col-md-4">
+                    <div class="idea-card idea-pink">
+                        <div class="idea-number"> 03 </div>
+                        <div class="idea-icon"> <i class="bi bi-people-fill"></i> </div> <span class="idea-label"> IDEA
+                            03 </span>
+                        <h3> ความสัมพันธ์ <br> กับผู้อื่น </h3>
+                        <p> เรียนรู้ที่จะแยกสิ่งที่เป็น “งานของเรา” ออกจากสิ่งที่เป็น “งานของคนอื่น” </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- =========================================================
+         WHO SHOULD READ
+         ========================================================= -->
+    <section id="reader" class="reader-section">
+        <div class="container">
+            <div class="section-heading text-center">
+                <p class="section-label"> <i class="bi bi-people me-2"></i> WHO SHOULD READ THIS? </p>
+                <h2> หนังสือเล่มนี้เหมาะกับใคร? </h2>
+            </div>
+            <div class="row g-4"> <!-- 01 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="reader-card">
+                        <div class="reader-icon"> <i class="bi bi-person-fill"></i> </div>
+                        <h5> คนที่ชอบจิตวิทยา </h5>
+                        <p> สนใจทำความเข้าใจ ความคิดและพฤติกรรมของมนุษย์ </p>
+                    </div>
+                </div> <!-- 02 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="reader-card">
+                        <div class="reader-icon"> <i class="bi bi-compass"></i> </div>
+                        <h5> คนที่กำลังค้นหาตัวเอง </h5>
+                        <p> กำลังตั้งคำถามว่า ชีวิตที่ต้องการจริง ๆ คืออะไร </p>
+                    </div>
+                </div> <!-- 03 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="reader-card">
+                        <div class="reader-icon"> <i class="bi bi-chat-dots-fill"></i> </div>
+                        <h5> คนที่คิดมากกับคำพูดคนอื่น </h5>
+                        <p> อยากกลับมาสำรวจอิทธิพล ของความคิดเห็นจากคนรอบข้าง </p>
+                    </div>
+                </div> <!-- 04 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="reader-card">
+                        <div class="reader-icon"> <i class="bi bi-arrow-repeat"></i> </div>
+                        <h5> คนที่อยากเปลี่ยนมุมมอง </h5>
+                        <p> สนใจมองชีวิต ความสัมพันธ์ และตัวตนในมุมใหม่ </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+         3. RECOMMENDED BOOKS LIST (รายการหนังสือแนะนำอื่นๆ)
+         ========================================================= -->
+
+    <section id="recommended" class="py-5 bg-light">
+
+        <div class="container py-5">
+
+            <!-- หัวข้อ -->
+            <div class="text-center mb-5">
+                <span class="badge rounded-pill px-3 py-2 mb-3" style="background-color: #ffd43b; color: #0a3478;">
+                    RECOMMENDATION
+                </span>
+
+                <h2 class="fw-bold display-5" style="color: #0a3478;">
+                    หนังสือแนะนำเพิ่มเติม
+                </h2>
+
+                <p class="text-muted">
+                    หนังสือที่น่าสนใจสำหรับผู้ที่ต้องการพัฒนาความคิดและมุมมองในการใช้ชีวิต
+                </p>
+            </div>
+
+
+            <!-- หนังสือ 3 เล่ม -->
+            <div class="row g-4 justify-content-center">
+
+                <!-- =========================
+           BOOK 1
+      ========================== -->
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+
+                        <!-- รูปปก -->
+                        <div class="text-center p-4" style="background-color: #e8f1ff;">
+
+                            <img src="../book-recomd/Images/15_ปกหน้า_กล้าที่จะถูกเกลียด_2.jpg"
+                                class="img-fluid rounded-3 shadow-sm" alt="กล้าที่จะถูกเกลียด 2"
+                                style="height: 330px; object-fit: cover;">
+                        </div>
+
+                        <!-- เนื้อหา -->
+                        <div class="card-body p-4">
+
+                            <span class="badge rounded-pill mb-3" style="background-color: #0a3478;">
+                                จิตวิทยา
+                            </span>
+
+                            <h4 class="fw-bold mb-2" style="color: #0a3478;">
+                                กล้าที่จะถูกเกลียด 2
+                            </h4>
+
+                            <p class="text-muted mb-2">
+                                <i class="bi bi-person-fill me-1"></i>
+                                คิชิมิ อิชิโร & โคะกะ ฟุมิทะเกะ
+                            </p>
+
+                            <p class="text-secondary">
+                                หนังสือภาคต่อที่นำเสนอแนวคิดทางจิตวิทยา
+                                ผ่านบทสนทนาระหว่างนักปรัชญากับชายหนุ่ม
+                                เพื่อช่วยให้ผู้อ่านมองชีวิต ความสัมพันธ์
+                                และการใช้ชีวิตในมุมมองที่แตกต่างออกไป
+                            </p>
+
+                            <button type="button" class="btn w-100 rounded-pill fw-bold"
+                                style="background-color: #ffd43b; color: #0a3478;" data-bs-toggle="modal"
+                                data-bs-target="#bookModal1">
+                                <i class="bi bi-book me-2"></i>
+                                ดูรายละเอียด
+                            </button>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+           BOOK 2
+      ========================== -->
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+
+                        <!-- รูปปก -->
+                        <div class="text-center p-4" style="background-color: #e8f1ff;">
+
+                            <img src="../book-recomd/Images/1000248314_front_XXL.webp"
+                                class="img-fluid rounded-3 shadow-sm" alt="The Psychology of Money จิตวิทยาว่าด้วยเงิน"
+                                style="height: 330px; object-fit: cover;">
+                        </div>
+
+                        <!-- เนื้อหา -->
+                        <div class="card-body p-4">
+
+                            <span class="badge rounded-pill mb-3" style="background-color: #0a3478;">
+                                การเงิน
+                            </span>
+
+                            <h4 class="fw-bold mb-2" style="color: #0a3478;">
+                                The Psychology of Money
+                            </h4>
+
+                            <p class="text-muted mb-2">
+                                <i class="bi bi-person-fill me-1"></i>
+                                Morgan Housel
+                            </p>
+
+                            <p class="text-secondary">
+                                หนังสือที่อธิบายเรื่องเงินผ่านมุมมองด้านพฤติกรรม
+                                และจิตวิทยา ช่วยให้เข้าใจว่าความคิด อารมณ์
+                                และประสบการณ์ของแต่ละคนส่งผลต่อการตัดสินใจเรื่องเงินอย่างไร
+                            </p>
+
+                            <button type="button" class="btn w-100 rounded-pill fw-bold"
+                                style="background-color: #ffd43b; color: #0a3478;" data-bs-toggle="modal"
+                                data-bs-target="#bookModal2">
+                                <i class="bi bi-book me-2"></i>
+                                ดูรายละเอียด
+                            </button>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+           BOOK 3
+      ========================== -->
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+
+                        <!-- รูปปก -->
+                        <div class="text-center p-4" style="background-color: #e8f1ff;">
+
+                            <img src="../book-recomd/Images/1000246790_front_XXL.webp"
+                                class="img-fluid rounded-3 shadow-sm" alt="THINK AGAIN คิดแล้ว, คิดอีก"
+                                style="height: 330px; object-fit: cover;">
+                        </div>
+
+                        <!-- เนื้อหา -->
+                        <div class="card-body p-4">
+
+                            <span class="badge rounded-pill mb-3" style="background-color: #0a3478;">
+                                พัฒนาความคิด
+                            </span>
+
+                            <h4 class="fw-bold mb-2" style="color: #0a3478;">
+                                THINK AGAIN คิดแล้ว, คิดอีก
+                            </h4>
+
+                            <p class="text-muted mb-2">
+                                <i class="bi bi-person-fill me-1"></i>
+                                Adam Grant
+                            </p>
+
+                            <p class="text-secondary">
+                                หนังสือที่ชวนให้เราทบทวนความเชื่อและความคิดของตัวเอง
+                                พร้อมเปิดใจต่อข้อมูลและมุมมองใหม่ ๆ
+                                เพื่อให้สามารถคิด วิเคราะห์ และตัดสินใจได้อย่างยืดหยุ่นมากขึ้น
+                            </p>
+
+                            <button type="button" class="btn w-100 rounded-pill fw-bold" style="background-color: #ffd43b; color: #0a3478;  position: relative;
+                            top: 31px;" data-bs-toggle="modal" data-bs-target="#bookModal1">
+                                <i class="bi bi-book me-2"></i>
+                                <i class="bi bi-book me-2"></i>
+                                ดูรายละเอียด
+
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================================================
+     MODAL : กล้าที่จะถูกเกลียด 2
+================================================== -->
+    <div class="modal fade" id="bookModal1" tabindex="-1" aria-labelledby="bookModalLabel1" aria-hidden="true">
 
         <div class="modal-dialog modal-dialog-centered modal-lg">
 
-
             <div class="modal-content border-0 rounded-4 overflow-hidden">
 
+                <div class="modal-header" style="background-color: #0a3478; color: white;">
 
-                <!-- Modal Header -->
-                <div class="modal-header bg-dark text-white">
-
-
-                    <h5 class="modal-title" id="bookModalLabel">
-
+                    <h5 class="modal-title fw-bold" id="bookModalLabel1">
                         <i class="bi bi-book-half me-2"></i>
-
-                        กล้าที่จะถูกเกลียด
-
+                        กล้าที่จะถูกเกลียด 2
                     </h5>
 
-
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="ปิด">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close">
                     </button>
 
-
                 </div>
-                <!-- Body -->
-                <div class="modal-body bg-light p-4 p-lg-5">
 
-                    <div class="row g-4 align-items-start">
+                <div class="modal-body p-4">
 
-                        <!-- ================= ปกหน้า ================= -->
-                        <div class="col-md-6 text-center">
+                    <div class="row align-items-center g-4">
 
-                            <div class="bg-white rounded-4 p-3 shadow-sm">
+                        <div class="col-md-5 text-center">
 
-                                <img src="../book-recomd/Images/book-in.jpg" alt="ปกหน้าหนังสือกล้าที่จะถูกเกลียด"
-                                    class="img-fluid rounded-3">
-
-                            </div>
-
-                            <div class="mt-3">
-
-                                <span class="badge bg-danger rounded-pill px-3 py-2">
-
-                                    <i class="bi bi-book me-1"></i>
-
-                                    ปกหน้า
-
-                                </span>
-
-                            </div>
-
+                            <img src="../book-recomd/Images/15_ปกหน้า_กล้าที่จะถูกเกลียด_2.jpg"
+                                class="img-fluid rounded-3 shadow" alt="กล้าที่จะถูกเกลียด 2"
+                                style="max-height: 420px;">
                         </div>
 
+                        <div class="col-md-7">
 
-                        <!-- ================= ปกหลัง ================= -->
-                        <div class="col-md-6 text-center">
+                            <span class="badge mb-3" style="background-color: #ffd43b; color: #0a3478;">
+                                จิตวิทยา
+                            </span>
 
-                            <div class="bg-white rounded-4 p-3 shadow-sm">
+                            <h3 class="fw-bold" style="color: #0a3478;">
+                                กล้าที่จะถูกเกลียด 2
+                            </h3>
 
-                                <img src="../book-recomd/Images/book-out.jpg" alt="ปกหลังหนังสือกล้าที่จะถูกเกลียด"
-                                    class="img-fluid rounded-3">
+                            <p class="mb-2">
+                                <strong>ผู้เขียน:</strong>
+                                คิชิมิ อิชิโร, โคะกะ ฟุมิทะเกะ
+                            </p>
 
-                            </div>
+                            <p class="mb-3">
+                                <strong>ผู้แปล:</strong>
+                                อภิญญา เตชะบุญไพศาล
+                            </p>
 
-                            <div class="mt-3">
+                            <hr>
 
-                                <span class="badge bg-dark rounded-pill px-3 py-2">
-
-                                    <i class="bi bi-book me-1"></i>
-
-                                    ปกหลัง
-
-                                </span>
-
-                            </div>
-
-                        </div>
-
-
-                    </div>
-
-
-                    <!-- ================= BOOK INFO ================= -->
-                    <div class="border border-dark rounded-4 p-4 mt-4 bg-white">
-
-                        <div class="row g-4 text-center text-md-start">
-
-                            <div class="col-md-4">
-
-                                <h6 class="text-danger fw-bold">
-                                    <i class="bi bi-bookmark me-2"></i>
-                                    ชื่อหนังสือ
-                                </h6>
-
-                                <p class="mb-0 fw-bold">
-                                    กล้าที่จะถูกเกลียด
-                                </p>
-
-                            </div>
-
-
-                            <div class="col-md-4">
-
-                                <h6 class="text-danger fw-bold">
-                                    <i class="bi bi-person me-2"></i>
-                                    ผู้เขียน
-                                </h6>
-
-                                <p class="mb-0">
-                                    คิชิมิ อิชิโร
-                                    <br>
-                                    โคงะ ฟุมิทาเกะ
-                                </p>
-
-                            </div>
-
-
-                            <div class="col-md-4">
-
-                                <h6 class="text-danger fw-bold">
-                                    <i class="bi bi-journal-text me-2"></i>
-                                    เนื้อหา
-                                </h6>
-
-                                <p class="mb-0">
-                                    จิตวิทยาและการใช้ชีวิต
-                                </p>
-
-                            </div>
+                            <p class="text-secondary">
+                                หนังสือภาคต่อที่ยังคงนำเสนอแนวคิดของ
+                                อัลเฟรด แอดเลอร์ ผ่านบทสนทนาระหว่างนักปรัชญา
+                                และชายหนุ่ม โดยชวนให้ผู้อ่านกลับมาทบทวน
+                                ความสัมพันธ์กับผู้อื่นและแนวทางการใช้ชีวิตของตนเอง
+                            </p>
 
                         </div>
 
@@ -365,904 +562,472 @@
 
                 </div>
 
-
-                <!-- Footer -->
-                <div class="modal-footer bg-white">
-
-                    <button type="button" class="btn btn-dark px-4" data-bs-dismiss="modal">
-
-                        <i class="bi bi-x-lg me-2"></i>
-
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn rounded-pill px-4" style="background-color: #0a3478; color: white;"
+                        data-bs-dismiss="modal">
                         ปิด
-
                     </button>
-
                 </div>
 
             </div>
-
         </div>
-
     </div>
 
 
-    <!-- =====================================================
-         ABOUT THE BOOK
-         ===================================================== -->
-    <section id="about" class="py-5 bg-light">
 
+    <!-- ==================================================
+     MODAL : THE PSYCHOLOGY OF MONEY
+================================================== -->
+    <div class="modal fade" id="bookModal2" tabindex="-1" aria-labelledby="bookModalLabel2" aria-hidden="true">
 
-        <div class="container py-5">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
 
+            <div class="modal-content border-0 rounded-4 overflow-hidden">
 
-            <div class="row align-items-center g-5">
+                <div class="modal-header" style="background-color: #0a3478; color: white;">
 
+                    <h5 class="modal-title fw-bold" id="bookModalLabel2">
+                        <i class="bi bi-cash-coin me-2"></i>
+                        The Psychology of Money
+                    </h5>
 
-                <!-- ================= LEFT TITLE ================= -->
-
-                <div class="col-lg-5">
-
-
-                    <p class="text-danger fw-bold mb-3">
-
-                        <i class="bi bi-info-circle me-2"></i>
-
-                        ABOUT THE BOOK
-
-                    </p>
-
-
-                    <h2 class="display-5 fw-bold lh-base">
-
-                        หนังสือที่ชวนให้เรา
-
-                        <br>
-
-                        <span class="text-danger">
-
-                            มองชีวิตในมุมใหม่
-
-                        </span>
-
-                    </h2>
-
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
 
                 </div>
 
+                <div class="modal-body p-4">
 
+                    <div class="row align-items-center g-4">
 
-                <!-- ================= RIGHT CONTENT ================= -->
+                        <div class="col-md-5 text-center">
 
-                <div class="col-lg-7">
+                            <img src="../book-recomd/Images/1000248314_front_XXL.webp"
+                                class="img-fluid rounded-3 shadow" alt="The Psychology of Money"
+                                style="max-height: 420px;">
+                        </div>
 
+                        <div class="col-md-7">
 
-                    <div class="border border-dark rounded-3 p-4 p-lg-5">
+                            <span class="badge mb-3" style="background-color: #ffd43b; color: #0a3478;">
+                                การเงิน
+                            </span>
 
+                            <h3 class="fw-bold" style="color: #0a3478;">
+                                The Psychology of Money
+                            </h3>
 
-                        <!-- Main Description -->
-                        <div class="mb-4">
-
-
-                            <p class="fs-5 lh-lg text-dark mb-3">
-
-
-                                <strong>
-                                    “กล้าที่จะถูกเกลียด”
-                                </strong>
-
-
-                                เป็นหนังสือที่นำเสนอแนวคิดทางจิตวิทยา
-                                ของอัลเฟรด แอดเลอร์
-                                ผ่านบทสนทนาระหว่างนักปรัชญากับชายหนุ่ม
-
-
+                            <p class="mb-2">
+                                <strong>ชื่อภาษาไทย:</strong>
+                                จิตวิทยาว่าด้วยเงิน
                             </p>
 
-
-
-                            <p class="text-secondary lh-lg mb-0">
-
-
-                                ชวนให้ผู้อ่านมองความสัมพันธ์กับคนรอบข้าง
-                                ตั้งคำถามกับความต้องการได้รับการยอมรับ
-                                และกลับมาเลือกวิถีชีวิตของตัวเอง
-
-
+                            <p class="mb-3">
+                                <strong>ผู้เขียน:</strong>
+                                Morgan Housel
                             </p>
 
+                            <hr>
+
+                            <p class="text-secondary">
+                                หนังสือที่นำเสนอเรื่องการเงินผ่านพฤติกรรมและจิตวิทยา
+                                โดยชี้ให้เห็นว่าการตัดสินใจเรื่องเงินไม่ได้ขึ้นอยู่กับ
+                                ความรู้ทางการเงินเพียงอย่างเดียว แต่ยังเกี่ยวข้องกับ
+                                ประสบการณ์ อารมณ์ และมุมมองของแต่ละคน
+                            </p>
 
                         </div>
 
+                    </div>
+
+                </div>
+
+                <div class="modal-footer border-0">
+
+                    <button type="button" class="btn rounded-pill px-4" style="background-color: #0a3478; color: white;"
+                        data-bs-dismiss="modal">
+                        ปิด
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
 
 
-                        <!-- Divider -->
-                        <hr class="border-dark opacity-100 my-4">
 
+    <!-- ==================================================
+     MODAL : THINK AGAIN
+================================================== -->
+    <div class="modal fade" id="bookModal3" tabindex="-1" aria-labelledby="bookModalLabel3" aria-hidden="true">
 
+        <div class="modal-dialog modal-dialog-centered modal-lg">
 
-                        <!-- ================= 01 / 02 / 03 ================= -->
+            <div class="modal-content border-0 rounded-4 overflow-hidden">
 
+                <div class="modal-header" style="background-color: #0a3478; color: white;">
+
+                    <h5 class="modal-title fw-bold" id="bookModalLabel3">
+                        <i class="bi bi-lightbulb me-2"></i>
+                        THINK AGAIN คิดแล้ว, คิดอีก
+                    </h5>
+
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+
+                </div>
+
+                <div class="modal-body p-4">
+
+                    <div class="row align-items-center g-4">
+
+                        <div class="col-md-5 text-center">
+
+                            <img src="../book-recomd/Images/1000246790_front_XXL.webp"
+                                class="img-fluid rounded-3 shadow" alt="THINK AGAIN คิดแล้ว, คิดอีก"
+                                style="max-height: 420px;">
+                        </div>
+
+                        <div class="col-md-7">
+
+                            <span class="badge mb-3" style="background-color: #ffd43b; color: #0a3478;">
+                                พัฒนาความคิด
+                            </span>
+
+                            <h3 class="fw-bold" style="color: #0a3478;">
+                                THINK AGAIN
+                            </h3>
+
+                            <h5 class="fw-bold mb-3">
+                                คิดแล้ว, คิดอีก
+                            </h5>
+
+                            <p class="mb-3">
+                                <strong>ผู้เขียน:</strong>
+                                Adam Grant
+                            </p>
+
+                            <hr>
+
+                            <p class="text-secondary">
+                                หนังสือที่ชวนให้เรากล้าตั้งคำถามกับสิ่งที่ตัวเองเชื่อ
+                                และเปิดใจยอมรับความเป็นไปได้ใหม่ ๆ
+                                การคิดใหม่ไม่ได้หมายถึงการยอมแพ้ต่อความคิดเดิม
+                                แต่คือการเรียนรู้ที่จะทบทวนและปรับเปลี่ยนความคิด
+                                เมื่อมีข้อมูลหรือเหตุผลใหม่เข้ามา
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="modal-footer border-0">
+
+                    <button type="button" class="btn rounded-pill px-4" style="background-color: #0a3478; color: white;"
+                        data-bs-dismiss="modal">
+                        ปิด
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- =========================================================
+         MODAL : แสดงรายละเอียดหนังสือเบื้องต้น (ไร้รูปภาพ)
+         ========================================================= -->
+    <div class="modal fade" id="bookModal" tabindex="-1" aria-labelledby="bookModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden">
+
+                <div class="modal-header bg-dark text-white p-3 border-0">
+                    <h5 class="modal-title fs-6 fw-bold" id="bookModalLabel">
+                        <i class="bi bi-book-half me-2 text-warning"></i> รายละเอียดหนังสือเบื้องต้น :
+                        กล้าที่จะถูกเกลียด
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body p-4 bg-light">
+
+                    <!-- ตารางข้อมูลจำเพาะ -->
+                    <div class="info-card-box bg-white p-4 rounded-3 border mb-4 shadow-sm">
+                        <h6 class="fw-bold text-dark border-bottom pb-2 mb-3">
+                            <i class="bi bi-card-heading text-danger me-2"></i> ข้อมูลทั่วไปของหนังสือ
+                        </h6>
                         <div class="row g-3">
-
-
-                            <!-- 01 -->
-                            <div class="col-md-4">
-
-
-                                <div class="border border-dark rounded-3 p-3 h-100">
-
-
-                                    <div class="d-flex align-items-center gap-3 mb-3">
-
-
-                                        <div class="text-danger fs-2">
-
-                                            <i class="bi bi-person-brain"></i>
-
-                                        </div>
-
-
-                                        <span class="fw-bold fs-4">
-
-                                            01
-
-                                        </span>
-
-
-                                    </div>
-
-
-
-                                    <h5 class="fw-bold mb-2">
-
-                                        จิตวิทยา
-
-                                    </h5>
-
-
-                                    <p class="text-secondary small mb-0 lh-lg">
-
-
-                                        ทำความเข้าใจความคิด
-                                        และพฤติกรรมของมนุษย์
-
-
-                                    </p>
-
-
-                                </div>
-
-
+                            <div class="col-md-6 col-lg-3">
+                                <small class="text-muted d-block fs-7">ชื่อหนังสือ (TH)</small>
+                                <span class="fw-bold text-dark fs-6">กล้าที่จะถูกเกลียด</span>
                             </div>
-
-
-
-                            <!-- 02 -->
-                            <div class="col-md-4">
-
-
-                                <div class="border border-dark rounded-3 p-3 h-100">
-
-
-                                    <div class="d-flex align-items-center gap-3 mb-3">
-
-
-                                        <div class="text-danger fs-2">
-
-                                            <i class="bi bi-compass"></i>
-
-                                        </div>
-
-
-                                        <span class="fw-bold fs-4">
-
-                                            02
-
-                                        </span>
-
-
-                                    </div>
-
-
-
-                                    <h5 class="fw-bold mb-2">
-
-                                        การใช้ชีวิต
-
-                                    </h5>
-
-
-                                    <p class="text-secondary small mb-0 lh-lg">
-
-
-                                        มองชีวิตผ่านแนวคิด
-                                        และการเลือกเส้นทางของตัวเอง
-
-
-                                    </p>
-
-
-                                </div>
-
-
+                            <div class="col-md-6 col-lg-3">
+                                <small class="text-muted d-block fs-7">ชื่อต่างประเทศ</small>
+                                <span class="fw-bold text-dark fs-6">嫌われる勇気</span>
                             </div>
-
-
-
-                            <!-- 03 -->
-                            <div class="col-md-4">
-
-
-                                <div class="border border-dark rounded-3 p-3 h-100">
-
-
-                                    <div class="d-flex align-items-center gap-3 mb-3">
-
-
-                                        <div class="text-danger fs-2">
-
-                                            <i class="bi bi-person-check"></i>
-
-                                        </div>
-
-
-                                        <span class="fw-bold fs-4">
-
-                                            03
-
-                                        </span>
-
-
-                                    </div>
-
-
-
-                                    <h5 class="fw-bold mb-2">
-
-                                        การค้นหาตัวเอง
-
-                                    </h5>
-
-
-                                    <p class="text-secondary small mb-0 lh-lg">
-
-
-                                        เรียนรู้ที่จะยอมรับตัวเอง
-                                        และเลือกชีวิตที่ต้องการ
-
-
-                                    </p>
-
-
-                                </div>
-
-
+                            <div class="col-md-6 col-lg-3">
+                                <small class="text-muted d-block fs-7">ผู้เขียน (Authors)</small>
+                                <span class="fw-bold text-dark fs-6">คิชิมิ อิชิโร, โคะกะ ฟุมิทะเกะ</span>
                             </div>
-
-
+                            <div class="col-md-6 col-lg-3">
+                                <small class="text-muted d-block fs-7">ผู้แปล (Translator)</small>
+                                <span class="fw-bold text-dark fs-6">โยทะกา จิรหงษ์</span>
+                            </div>
+                            <div class="col-md-6 col-lg-3 mt-3">
+                                <small class="text-muted d-block fs-7">จำนวนหน้า</small>
+                                <span class="fw-bold text-dark">313 หน้า</span>
+                            </div>
+                            <div class="col-md-6 col-lg-3 mt-3">
+                                <small class="text-muted d-block fs-7">เลขรหัส ISBN</small>
+                                <span class="fw-bold text-dark">9786162871429</span>
+                            </div>
+                            <div class="col-md-6 col-lg-3 mt-3">
+                                <small class="text-muted d-block fs-7">หมวดหมู่</small>
+                                <span class="fw-bold text-dark">จิตวิทยา / พัฒนาตนเอง</span>
+                            </div>
+                            <div class="col-md-6 col-lg-3 mt-3">
+                                <small class="text-muted d-block fs-7">สำนักพิมพ์</small>
+                                <span class="fw-bold text-dark">วีเลิร์น (WeLearn)</span>
+                            </div>
                         </div>
-
-
                     </div>
 
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         BIG QUOTE
-         ===================================================== -->
-    <section class="bg-danger text-white py-5">
-
-
-        <div class="container py-5 text-center">
-
-
-            <!-- Quote Icon -->
-            <div class="display-4 mb-4">
-
-                <i class="bi bi-chat-quote"></i>
-
-            </div>
-
-
-            <!-- Quote -->
-            <p class="display-4 fw-bold">
-
-
-                “คุณไม่จำเป็นต้อง
-
-                <br>
-
-                เป็นที่ชื่นชอบของทุกคน”
-
-
-            </p>
-
-
-            <!-- Quote Description -->
-            <p class="lead mt-4">
-
-                เพราะชีวิตของคุณ เป็นของคุณเอง
-
-            </p>
-
-
-        </div>
-
-
-    </section>
-
-
-
-    <!-- =====================================================
-         KEY IDEAS
-         ===================================================== -->
-    <section id="ideas" class="py-5 bg-light">
-
-
-        <div class="container py-5">
-
-
-            <!-- Section Heading -->
-            <div class="text-center mb-5">
-
-
-                <p class="text-danger fw-bold">
-
-                    <i class="bi bi-lightbulb me-2"></i>
-
-                    KEY IDEAS
-
-                </p>
-
-
-                <h2 class="display-5 fw-bold">
-
-                    3 แนวคิดที่น่าสนใจ
-
-                </h2>
-
-
-                <p class="text-secondary">
-
-                    แนวคิดสำคัญที่ปรากฏในหนังสือ
-
-                </p>
-
-
-            </div>
-
-
-
-            <!-- Cards -->
-            <div class="row g-4">
-
-
-
-                <!-- ================= IDEA 01 ================= -->
-
-                <div class="col-md-4">
-
-
-                    <div class="card border-0 shadow-sm h-100">
-
-
-                        <div class="card-body p-4">
-
-
-                            <div class="text-danger display-4 mb-3">
-
-                                <i class="bi bi-person-x"></i>
-
-                            </div>
-
-
-                            <span class="badge bg-danger rounded-pill mb-3">
-
-                                IDEA 01
-
-                            </span>
-
-
-                            <h3 class="fw-bold">
-
-                                เลิกใช้ชีวิต
-
-                                <br>
-
-                                ตามสายตาคนอื่น
-
-                            </h3>
-
-
-                            <p class="text-secondary mt-3">
-
-
-                                เราไม่สามารถควบคุมความคิดของคนอื่นได้
-                                แต่เราสามารถเลือกการกระทำ
-                                และวิธีใช้ชีวิตของตัวเองได้
-
-
-                            </p>
-
-
-                        </div>
-
-
-                    </div>
-
-
-                </div>
-
-
-
-                <!-- ================= IDEA 02 ================= -->
-
-                <div class="col-md-4">
-
-
-                    <div class="card border-0 shadow-sm h-100">
-
-
-                        <div class="card-body p-4">
-
-
-                            <div class="text-dark display-4 mb-3">
-
-                                <i class="bi bi-person-heart"></i>
-
-                            </div>
-
-
-                            <span class="badge bg-dark rounded-pill mb-3">
-
-                                IDEA 02
-
-                            </span>
-
-
-                            <h3 class="fw-bold">
-
-                                กล้าที่จะ
-
-                                <br>
-
-                                เป็นตัวเอง
-
-                            </h3>
-
-
-                            <p class="text-secondary mt-3">
-
-
-                                การใช้ชีวิตในแบบของตัวเอง
-                                อาจไม่ได้รับการยอมรับจากทุกคน
-                                แต่ทำให้เราเลือกทิศทางชีวิตได้ด้วยตัวเอง
-
-
-                            </p>
-
-
-                        </div>
-
-
-                    </div>
-
-
-                </div>
-
-
-
-                <!-- ================= IDEA 03 ================= -->
-
-                <div class="col-md-4">
-
-
-                    <div class="card border-0 shadow-sm h-100">
-
-
-                        <div class="card-body p-4">
-
-
-                            <div class="text-danger display-4 mb-3">
-
-                                <i class="bi bi-people"></i>
-
-                            </div>
-
-
-                            <span class="badge bg-danger rounded-pill mb-3">
-
-                                IDEA 03
-
-                            </span>
-
-
-                            <h3 class="fw-bold">
-
-                                ความสัมพันธ์
-
-                                <br>
-
-                                กับผู้อื่น
-
-                            </h3>
-
-
-                            <p class="text-secondary mt-3">
-
-
-                                เรียนรู้ที่จะแยกสิ่งที่เป็น
-                                “งานของเรา”
-                                ออกจากสิ่งที่เป็น
-                                “งานของคนอื่น”
-
-
-                            </p>
-
-
-                        </div>
-
-
-                    </div>
-
-
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         WHO SHOULD READ
-         ===================================================== -->
-    <section id="reader" class="py-5 bg-white">
-
-
-        <div class="container py-5">
-
-
-            <!-- Section Heading -->
-            <div class="row justify-content-center">
-
-
-                <div class="col-lg-9 text-center">
-
-
-                    <p class="text-danger fw-bold">
-
-                        <i class="bi bi-people me-2"></i>
-
-                        WHO SHOULD READ THIS?
-
-                    </p>
-
-
-                    <h2 class="display-5 fw-bold mb-5">
-
-                        หนังสือเล่มนี้เหมาะกับใคร?
-
-                    </h2>
-
-
-                </div>
-
-
-            </div>
-
-
-
-            <!-- Reader Cards -->
-            <div class="row g-4">
-
-
-
-                <!-- Reader 01 -->
-                <div class="col-md-3">
-
-
-                    <div class="text-center p-4 border border-danger rounded-4 h-100">
-
-
-                        <div class="text-danger display-4 mb-3">
-
-                            <i class="bi bi-person-brain"></i>
-
-                        </div>
-
-
-                        <h5 class="fw-bold">
-
-                            คนที่ชอบจิตวิทยา
-
-                        </h5>
-
-
-                        <p class="text-secondary small">
-
-
-                            สนใจทำความเข้าใจ
-                            ความคิดและพฤติกรรมของมนุษย์
-
-
+                    <!-- เรื่องย่อเบื้องต้น -->
+                    <div class="bg-white p-4 rounded-3 border shadow-sm mb-4">
+                        <h6 class="fw-bold text-dark border-bottom pb-2 mb-3">
+                            <i class="bi bi-journal-text text-danger me-2"></i> เรื่องย่อเบื้องต้น (Synopsis)
+                        </h6>
+                        <p class="text-secondary fs-6 lh-base mb-2">
+                            ณ เมืองหลวงอันเงียบสงบ มีนักปรัชญาผู้สั่งสมวิชาจิตวิทยาของ <strong>อัลเฟรด แอดเลอร์</strong>
+                            วันหนึ่งมีชายหนุ่มผู้เปี่ยมไปด้วยความสับสน แรงอคติ และมองโลกในแง่ร้ายได้เดินทางมาเข้าพบ
+                            เพื่อโต้เถียงว่า "มนุษย์เราไม่สามารถเปลี่ยนแปลงตัวเองได้ และโลกนี้ก็เต็มไปด้วยความทุกข์ระทม"
                         </p>
-
-
-                    </div>
-
-
-                </div>
-
-
-
-                <!-- Reader 02 -->
-                <div class="col-md-3">
-
-
-                    <div class="text-center p-4 border border-dark rounded-4 h-100">
-
-
-                        <div class="text-dark display-4 mb-3">
-
-                            <i class="bi bi-compass"></i>
-
-                        </div>
-
-
-                        <h5 class="fw-bold">
-
-                            คนที่กำลังค้นหาตัวเอง
-
-                        </h5>
-
-
-                        <p class="text-secondary small">
-
-
-                            กำลังตั้งคำถามว่า
-                            ชีวิตที่ต้องการจริง ๆ คืออะไร
-
-
+                        <p class="text-secondary fs-6 lh-base mb-0">
+                            ตลอดการสนทนา 5 คืนติดต่อกัน นักปรัชญาได้ค่อยๆ กะเทาะเปลือกความคิด ชวนให้ชายหนุ่มเห็นว่า
+                            แท้จริงแล้วความทุกข์ส่วนใหญ่ในชีวิตมนุษย์ เกิดจาก <em>"ความสัมพันธ์กับผู้อื่น"</em>
+                            และเสนอวิธีคิดที่จะช่วยปลดปล่อยเราให้เป็นอิสระ ผ่านการแยกแยะงาน และความกล้าที่จะถูกเกลียด
                         </p>
-
-
                     </div>
 
+                    <!-- สารบัญและหัวข้อสำคัญ -->
+                    <div class="bg-white p-4 rounded-3 border shadow-sm">
+                        <h6 class="fw-bold text-dark border-bottom pb-2 mb-3">
+                            <i class="bi bi-list-check text-danger me-2"></i> โครงสร้างเนื้อหาสำคัญ (5 คืนแห่งการสนทนา)
+                        </h6>
+                        <ul class="list-unstyled mb-0 row g-2">
+                            <li class="col-md-6 text-secondary"><i
+                                    class="bi bi-check-circle-fill text-danger me-2"></i><strong>คืนที่ 1:</strong>
+                                อย่าเชื่อเรื่องบาดแผลทางใจ (Trauma)</li>
+                            <li class="col-md-6 text-secondary"><i
+                                    class="bi bi-check-circle-fill text-danger me-2"></i><strong>คืนที่ 2:</strong>
+                                ความทุกข์ทั้งหมดเกิดจากความสัมพันธ์</li>
+                            <li class="col-md-6 text-secondary"><i
+                                    class="bi bi-check-circle-fill text-danger me-2"></i><strong>คืนที่ 3:</strong>
+                                ตัดงานของคนอื่นออกจากชีวิต</li>
+                            <li class="col-md-6 text-secondary"><i
+                                    class="bi bi-check-circle-fill text-danger me-2"></i><strong>คืนที่ 4:</strong>
+                                ศูนย์กลางของโลกอยู่นอกตัวเรา</li>
+                            <li class="col-md-6 text-secondary"><i
+                                    class="bi bi-check-circle-fill text-danger me-2"></i><strong>คืนที่ 5:</strong>
+                                ใช้ชีวิตใน "ตอนนี้และที่นี่" อย่างเอาจริงเอาจัง</li>
+                        </ul>
+                    </div>
 
                 </div>
 
-
-
-                <!-- Reader 03 -->
-                <div class="col-md-3">
-
-
-                    <div class="text-center p-4 border border-danger rounded-4 h-100">
-
-
-                        <div class="text-danger display-4 mb-3">
-
-                            <i class="bi bi-chat-dots"></i>
-
-                        </div>
-
-
-                        <h5 class="fw-bold">
-
-                            คนที่คิดมากกับคำพูดคนอื่น
-
-                        </h5>
-
-
-                        <p class="text-secondary small">
-
-
-                            อยากกลับมาสำรวจอิทธิพล
-                            ของความคิดเห็นจากคนรอบข้าง
-
-
-                        </p>
-
-
-                    </div>
-
-
+                <div class="modal-footer bg-white border-0">
+                    <button type="button" class="btn btn-secondary rounded-pill px-4"
+                        data-bs-dismiss="modal">ปิดหน้าต่าง</button>
                 </div>
-
-
-
-                <!-- Reader 04 -->
-                <div class="col-md-3">
-
-
-                    <div class="text-center p-4 border border-dark rounded-4 h-100">
-
-
-                        <div class="text-dark display-4 mb-3">
-
-                            <i class="bi bi-arrow-repeat"></i>
-
-                        </div>
-
-
-                        <h5 class="fw-bold">
-
-                            คนที่อยากเปลี่ยนมุมมอง
-
-                        </h5>
-
-
-                        <p class="text-secondary small">
-
-
-                            สนใจมองชีวิต
-                            ความสัมพันธ์
-                            และตัวตนในมุมใหม่
-
-
-                        </p>
-
-
-                    </div>
-
-
-                </div>
-
 
             </div>
-
-
         </div>
+    </div>
 
+    <!-- =========================================================
+         BUY SECTION
+         ========================================================= -->
+    <section id="buy" class="buy-section">
+        <div class="container">
+            <div class="buy-card">
+                <div class="row align-items-center g-4"> <!-- LEFT -->
+                    <div class="col-lg-7"> <span class="buy-label"> <i class="bi bi-cart-heart-fill me-2"></i> READY TO
+                            READ? </span>
+                        <h2> อยากลองอ่าน <span>“กล้าที่จะถูกเกลียด”</span> ไหม? </h2>
+                        <p> หากแนวคิดในหนังสือเล่มนี้ ทำให้คุณอยากลองมองชีวิตในมุมใหม่
+                            สามารถดูรายละเอียดและสั่งซื้อหนังสือ ผ่านร้านหนังสือออนไลน์ได้ </p>
+                        <div class="buy-buttons"> <a href="https://www.naiin.com/product/detail/192079" target="_blank"
+                                rel="noopener noreferrer" class="buy-button"> <i class="bi bi-bag-fill"></i>
+                                ซื้อที่นายอินทร์ <i class="bi bi-box-arrow-up-right small"></i> </a> <a
+                                href="https://shopee.co.th/%E0%B8%99%E0%B8%B2%E0%B8%A2%E0%B8%AD%E0%B8%B4%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B9%8C-%E0%B8%AB%E0%B8%99%E0%B8%B1%E0%B8%87%E0%B8%AA%E0%B8%B7%E0%B8%AD-%E0%B8%81%E0%B8%A5%E0%B9%89%E0%B8%B2%E0%B8%97%E0%B8%B5%E0%B8%88%E0%B8%B0%E0%B8%96%E0%B8%B9%E0%B8%81%E0%B9%80%E0%B8%81%E0%B8%A5%E0%B8%B5%E0%B8%A2%E0%B8%94-i.81260495.18510737861"
+                                target="_blank" rel="noopener noreferrer" class="buy-button secondary"> <i
+                                    class="bi bi-shop"></i> ดูร้านค้าออนไลน์ <i
+                                    class="bi bi-box-arrow-up-right small"></i> </a> </div> <small class="buy-note"> <i
+                                class="bi bi-info-circle me-1"></i> ราคาและสต็อกสินค้าอาจเปลี่ยนแปลงตามร้านค้า </small>
+                    </div> <!-- RIGHT -->
+                    <div class="col-lg-5">
+                        <div class="buy-book-mini">
+                            <div class="buy-book-back"></div> <img src="../book-recomd/Images/book-in.jpg"
+                                alt="กล้าที่จะถูกเกลียด">
+                            <div class="buy-book-tag"> <i class="bi bi-heart-fill"></i> READ IT </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- SOURCE -->
+            <div class="purchase-source text-center"> <i class="bi bi-link-45deg me-1"></i>
+                ช่องทางซื้ออ้างอิงจากหน้าสินค้าออนไลน์ของร้านหนังสือ <a
+                    href="https://www.naiin.com/product/detail/192079" target="_blank" rel="noopener noreferrer">
+                    นายอินทร์ </a> </div>
+        </div>
     </section>
-
-
-
-    <!-- =====================================================
-         CTA
-         ===================================================== -->
-    <section class="bg-dark text-white py-5">
-
-
-        <div class="container py-5 text-center">
-
-
-            <!-- Icon -->
-            <div class="display-4 text-danger mb-3">
-
-                <i class="bi bi-stars"></i>
-
+    <!-- =========================================================
+         CTA SECTION
+         ========================================================= -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content text-center">
+                <div class="cta-icon"> <i class="bi bi-stars"></i> </div>
+                <h2> แล้วคุณล่ะ... </h2>
+                <p class="cta-title"> กล้าที่จะถูกเกลียดหรือยัง? </p>
+                <p class="cta-description"> ลองเปิดหนังสือ แล้วตั้งคำถามกับชีวิตของตัวเอง </p> <a href="#home"
+                    class="cta-button"> <i class="bi bi-bag-heart me-2"></i>กล้าที่จะถูกเกลียด</a>
             </div>
-
-
-            <!-- Heading -->
-            <h2 class="display-5 fw-bold">
-
-                แล้วคุณล่ะ...
-
-            </h2>
-
-
-            <p class="display-6 text-danger fw-bold">
-
-                กล้าที่จะถูกเกลียดหรือยัง?
-
-            </p>
-
-
-            <p class="text-white-50 mt-3">
-
-                ลองเปิดหนังสือ
-                แล้วตั้งคำถามกับชีวิตของตัวเอง
-
-            </p>
-
-
-            <!-- Back To Top -->
-            <a href="#home" class="btn btn-danger btn-lg mt-3 px-5">
-
-                <i class="bi bi-arrow-up me-2"></i>
-
-                กลับขึ้นด้านบน
-
-            </a>
-
-
         </div>
-
-
     </section>
 
-
-
-    <!-- =====================================================
+    <!-- =========================================================
          FOOTER
-         ===================================================== -->
-    <footer class="bg-black text-white py-4">
-
+         ========================================================= -->
+    <footer class="text-white pt-5 pb-3" style="background-color: #0a3478;">
 
         <div class="container">
 
+            <div class="row g-4">
 
-            <div class="row align-items-center">
+                <!-- Logo / About -->
+                <div class="col-md-5">
+
+                    <h3 class="fw-bold mb-3">
+                        <i class="bi bi-book-half me-2" style="color: #ffd43b;"></i>
+                        NHT<span style="color: #ffd43b;">BOOK.</span>
+                    </h3>
+
+                    <p class="mb-0 text-white-50">
+                        เว็บไซต์แนะนำหนังสือที่รวบรวมหนังสือน่าอ่าน
+                        พร้อมเนื้อหาและแนวคิดที่ช่วยเปิดมุมมองใหม่ ๆ
+                        ให้กับการใช้ชีวิต
+                    </p>
+
+                </div>
 
 
-                <!-- Footer Left -->
-                <div class="col-md-6 text-center text-md-start">
+                <!-- เมนู -->
+                <div class="col-6 col-md-3">
 
-
-                    <h5 class="fw-bold mb-1">
-
-                        <i class="bi bi-book-half me-2"></i>
-
-                        BOOK<span class="text-danger">.</span>
-
+                    <h5 class="fw-bold mb-3" style="color: #ffd43b;">
+                        เมนู
                     </h5>
 
+                    <ul class="list-unstyled">
 
-                    <small class="text-white-50">
+                        <li class="mb-2">
+                            <a href="#home" class="text-white text-decoration-none">
+                                <i class="bi bi-house me-2"></i>
+                                HOME
+                            </a>
+                        </li>
 
-                        เว็บไซต์แนะนำหนังสือ
-                        “กล้าที่จะถูกเกลียด”
+                        <li class="mb-2">
+                            <a href="#about" class="text-white text-decoration-none">
+                                <i class="bi bi-book me-2"></i>
+                                ABOUT
+                            </a>
+                        </li>
 
-                    </small>
+                        <li class="mb-2">
+                            <a href="#ideas" class="text-white text-decoration-none">
+                                <i class="bi bi-lightbulb me-2"></i>
+                                IDEAS
+                            </a>
+                        </li>
 
+                        <li>
+                            <a href="#recommended" class="text-white text-decoration-none">
+                                <i class="bi bi-journal-bookmark me-2"></i>
+                                RECOMMENDATION
+                            </a>
+                        </li>
+
+                    </ul>
 
                 </div>
 
 
+                <!-- ติดต่อ / Social -->
+                <div class="col-6 col-md-4">
 
-                <!-- Footer Right -->
-                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    <h5 class="fw-bold mb-3" style="color: #ffd43b;">
+                        FOLLOW FOR MORE
+                    </h5>
 
+                    <p class="text-white-50 mb-3">
+                        ติดตามข่าวสารและหนังสือแนะนำใหม่ ๆ
+                    </p>
 
-                    <small class="text-white-50">
+                    <div class="d-flex gap-2">
 
-                        <i class="bi bi-heart-fill text-danger me-1">
-                        </i>
+                        <a href="#" class="btn rounded-circle d-flex align-items-center justify-content-center"
+                            style="width: 42px; height: 42px; background-color: #ffd43b; color: #0a3478;">
+                            <i class="bi bi-facebook"></i>
+                        </a>
 
-                        © 2026 Book Recommendation
+                        <a href="#" class="btn rounded-circle d-flex align-items-center justify-content-center"
+                            style="width: 42px; height: 42px; background-color: #ffd43b; color: #0a3478;">
+                            <i class="bi bi-instagram"></i>
+                        </a>
 
-                    </small>
+                        <a href="#" class="btn rounded-circle d-flex align-items-center justify-content-center"
+                            style="width: 42px; height: 42px; background-color: #ffd43b; color: #0a3478;">
+                            <i class="bi bi-envelope-fill"></i>
+                        </a>
 
+                    </div>
 
                 </div>
-
 
             </div>
 
 
-        </div>
+            <!-- เส้นคั่น -->
+            <hr class="border-light opacity-25 my-4">
 
+
+            <!-- Copyright -->
+            <div class="text-center">
+
+                <p class="mb-0 text-white-50">
+                    <i class="bi bi-heart-fill me-1" style="color: #ffd43b;"></i>
+
+                    © 2026 NHTBOOK.Recommendation
+                    All Rights Reserved.
+                </p>
+
+            </div>
+
+        </div>
 
     </footer>
 
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 
-
-    <!-- =====================================================
-         BOOTSTRAP JAVASCRIPT
-         ===================================================== -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-    </script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+</html>>
+</script>
 </body>
 
 </html>
