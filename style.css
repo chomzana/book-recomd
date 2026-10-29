@@ -561,6 +561,53 @@ section {
     margin-bottom: 0;
 }
 
+/* FAQ SECTION */
+.faq-section {
+  background-color: #f8f9fa;
+  scroll-margin-top: 90px;
+}
+
+.faq-section .accordion-item {
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.faq-section .accordion-button {
+  padding: 20px;
+  color: #0a3478;
+  background-color: #ffd43b;
+}
+
+.faq-section .accordion-button:not(.collapsed) {
+  color: #0a3478;
+  background-color: #ffd43b;
+  box-shadow: none;
+}
+
+.faq-section .accordion-button:focus {
+  box-shadow: none;
+  border-color: #ffd43b;
+}
+
+.faq-section .accordion-body {
+  color: #080808;
+  line-height: 1.8;
+  background-color: #ffd43b;
+}
+
+@media (max-width: 576px) {
+  .faq-section .accordion-button {
+    padding: 15px;
+    font-size: 0.95rem;
+  }
+
+  .faq-section .accordion-body {
+    font-size: 0.9rem;
+  }
+}
+
 
 /* =========================================================
    RECOMMENDED
