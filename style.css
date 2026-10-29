@@ -609,6 +609,24 @@ section {
 }
 
 
+#faq.faq-section {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    min-height: 200px;
+    overflow: visible !important;
+    position: relative !important;
+    background: #f4f7fc !important;
+    color: #172b4d !important;
+    padding: 60px 0 !important;
+}
+
+#faq .accordion-item {
+    display: block !important;
+    visibility: visible !important;
+}
+
 /* =========================================================
    RECOMMENDED
 ========================================================= */
